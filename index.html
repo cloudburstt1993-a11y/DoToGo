@@ -1,0 +1,2376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>DoToGo | Vietnamese Home Catering in Grand Junction, CO</title>
+  <meta name="description" content="Authentic Vietnamese home catering in Grand Junction, Colorado. Fresh egg rolls, phở, spring rolls, bánh mì & cơm tấm made to order for events and gatherings. Min. 10 guests. Book online.">
+  <meta name="keywords" content="Vietnamese catering Grand Junction, Vietnamese food Grand Junction Colorado, home catering Grand Junction CO, egg rolls catering, pho catering Colorado, spring rolls catering, Vietnamese caterer near me, Grand Junction event catering, Western Slope catering">
+  <meta name="author" content="DoToGo">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dotogo.com/">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="US-CO">
+  <meta name="geo.placename" content="Grand Junction, Colorado">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dotogo.com/">
+  <meta property="og:title" content="DoToGo | Vietnamese Home Catering in Grand Junction, CO">
+  <meta property="og:description" content="Fresh Vietnamese dishes crafted to order from our home kitchen — egg rolls, phở, spring rolls, bánh mì & cơm tấm. Perfect for events and gatherings of all sizes in Grand Junction, Colorado.">
+  <meta property="og:site_name" content="DoToGo">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DoToGo | Vietnamese Home Catering in Grand Junction, CO">
+  <meta name="twitter:description" content="Authentic Vietnamese home catering for events and gatherings in Grand Junction, Colorado. Book online.">
+
+  <!-- Schema.org: CateringBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CateringBusiness",
+    "name": "DoToGo",
+    "description": "Authentic Vietnamese home catering in Grand Junction, Colorado. Fresh egg rolls, phở, spring rolls, bánh mì, and cơm tấm crafted to order for events and gatherings.",
+    "url": "https://dotogo.com",
+    "email": "hello@dotogo.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Grand Junction",
+      "addressRegion": "CO",
+      "addressCountry": "US"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Grand Junction" },
+      { "@type": "State", "name": "Colorado" }
+    ],
+    "servesCuisine": "Vietnamese",
+    "priceRange": "$$",
+    "hasMenu": "https://dotogo.com/#menu",
+    "acceptsReservations": true,
+    "menu": [
+      { "@type": "MenuItem", "name": "Crispy Egg Rolls", "offers": { "@type": "Offer", "price": "14", "priceCurrency": "USD" } },
+      { "@type": "MenuItem", "name": "Phở Noodle Soup", "offers": { "@type": "Offer", "price": "18", "priceCurrency": "USD" } },
+      { "@type": "MenuItem", "name": "Gỏi Cuốn (Spring Rolls)", "offers": { "@type": "Offer", "price": "12", "priceCurrency": "USD" } },
+      { "@type": "MenuItem", "name": "Bánh Mì Sandwich", "offers": { "@type": "Offer", "price": "13", "priceCurrency": "USD" } },
+      { "@type": "MenuItem", "name": "Cơm Tấm (Broken Rice)", "offers": { "@type": "Offer", "price": "16", "priceCurrency": "USD" } }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:       #b8860b;
+      --gold-light: #d4a017;
+      --red:        #1e0606;
+      --red-bright: #e85040;
+      --bg:         #3d0808;
+      --bg-2:       #4d1010;
+      --bg-3:       #5e1818;
+      --text:       #f5ede8;
+      --muted:      #c09080;
+      --border:     rgba(184, 134, 11, 0.22);
+      --border-s:   rgba(184, 134, 11, 0.45);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      background: rgba(30,6,6,0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: #080808;
+      text-decoration: none;
+      padding: 9px 22px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 140px 24px 100px;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 90% 70% at 68% 42%, rgba(100,10,10,0.80) 0%, transparent 65%),
+        radial-gradient(ellipse 55% 45% at 18% 82%, rgba(184,134,11,0.15) 0%, transparent 55%),
+        radial-gradient(ellipse 45% 35% at 50% 0%, rgba(160,30,20,0.35) 0%, transparent 60%),
+        #3d0808;
+    }
+
+
+    .hero-content { position: relative; z-index: 1; max-width: 820px; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.68rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 36px;
+    }
+
+    .eyebrow::before, .eyebrow::after {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(4rem, 12vw, 9rem);
+      font-weight: 900;
+      line-height: 0.9;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+
+    .hero-title .accent { color: var(--gold); }
+
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 44px;
+      font-weight: 400;
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 440px;
+      margin: 0 auto 52px;
+      line-height: 1.85;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #080808;
+      text-decoration: none;
+      padding: 14px 38px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    .btn-ghost {
+      border: 1px solid rgba(242,237,228,0.25);
+      color: var(--text);
+      text-decoration: none;
+      padding: 14px 38px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .scroll-bar {
+      width: 1px;
+      height: 52px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: pulse-bar 2.2s ease-in-out infinite;
+    }
+
+    .scroll-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @keyframes pulse-bar {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    /* ── SHARED ── */
+    section { padding: 100px 24px; }
+    .container { max-width: 1120px; margin: 0 auto; }
+
+    .tag {
+      font-size: 0.66rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .tag::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .gold-rule { width: 36px; height: 2px; background: var(--gold); margin: 22px 0; }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-body p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      line-height: 1.85;
+      font-size: 0.95rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .stat {
+      background: var(--bg-2);
+      padding: 40px 28px;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .stat:hover { background: var(--bg-3); }
+
+    .stat-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .stat-lbl {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── MENU ── */
+    #menu { background: var(--bg); }
+
+    .menu-hd {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .menu-hd .tag { justify-content: center; }
+    .menu-hd .tag::before { display: none; }
+
+    .menu-hd p {
+      color: var(--muted);
+      max-width: 460px;
+      margin: 0 auto;
+      font-size: 0.92rem;
+      line-height: 1.8;
+    }
+
+    /* Featured card (Egg Rolls) */
+    .menu-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--border);
+      margin-bottom: 1px;
+      background: var(--bg-2);
+      transition: background 0.2s;
+    }
+
+    .menu-featured:hover { background: var(--bg-3); }
+
+    .featured-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      background: linear-gradient(135deg, #160700, #3d1505);
+      min-height: 260px;
+      position: relative;
+    }
+
+    .featured-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 60%, rgba(201,168,76,0.06));
+    }
+
+    .featured-body {
+      padding: 48px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 4px 12px;
+      margin-bottom: 20px;
+      width: fit-content;
+    }
+
+    /* Regular menu grid (2x2) */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-top: none;
+    }
+
+    .menu-card {
+      background: var(--bg-2);
+      transition: background 0.2s;
+      overflow: hidden;
+    }
+
+    .menu-card:hover { background: var(--bg-3); }
+
+    .card-img {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      position: relative;
+    }
+
+    .menu-card:nth-child(1) .card-img { background: linear-gradient(135deg, #280505, #4a0c0c); }
+    .menu-card:nth-child(2) .card-img { background: linear-gradient(135deg, #1a0208, #3a0514); }
+    .menu-card:nth-child(3) .card-img { background: linear-gradient(135deg, #200800, #441400); }
+    .menu-card:nth-child(4) .card-img { background: linear-gradient(135deg, #180520, #320a40); }
+
+    .card-body { padding: 24px 24px 28px; }
+
+    .card-num {
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .card-desc {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.72;
+      margin-bottom: 18px;
+    }
+
+    .per-person {
+      font-size: 0.68rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .rotating-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.62rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(184,134,11,0.4);
+      padding: 5px 14px;
+      margin-bottom: 12px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .min-note {
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .card-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* shared menu desc styles for featured */
+    .menu-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .menu-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .menu-num {
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .menu-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .menu-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      margin-top: 28px;
+    }
+
+    /* ── HOW TO ORDER ── */
+    #order {
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .order-hd {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .order-hd .tag { justify-content: center; }
+    .order-hd .tag::before, .order-hd .tag::after {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      display: block;
+    }
+    .order-hd .tag::before { display: block; }
+
+    .order-hd p {
+      color: var(--muted);
+      max-width: 420px;
+      margin: 0 auto;
+      font-size: 0.92rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .step {
+      background: var(--bg-2);
+      padding: 52px 36px;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .step:hover { background: var(--bg-3); }
+
+    .step-icon { font-size: 2.2rem; display: block; margin-bottom: 18px; }
+
+    .step-n {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: rgba(201,168,76,0.12);
+      display: block;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .step-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ── CONTACT ── */
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 36px;
+    }
+
+    .citem {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 24px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .citem:hover { border-color: var(--gold); background: var(--bg-2); }
+
+    .citem-icon { font-size: 1.4rem; width: 40px; text-align: center; flex-shrink: 0; }
+
+    .citem-lbl {
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .citem-val { font-size: 0.95rem; font-weight: 500; }
+
+    /* Social icons block */
+    .socials-block {
+      padding: 22px 24px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .socials-block:hover { border-color: var(--gold); }
+
+    .socials-lbl {
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .socials-row { display: flex; gap: 10px; }
+
+    .social-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 8px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--muted);
+      flex: 1;
+      background: var(--bg);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+
+    .social-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201, 168, 76, 0.04);
+    }
+
+    .social-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+    .social-btn span {
+      font-size: 0.58rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* Footer social icons */
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .footer-social-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .footer-social-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .footer-social-btn svg { width: 18px; height: 18px; }
+
+    /* Form */
+    .form-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 28px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .fg { display: flex; flex-direction: column; gap: 7px; }
+
+    .fg label {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 13px 16px;
+      font-size: 0.88rem;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+      border-radius: 0;
+    }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus { border-color: var(--gold); }
+
+    .fg textarea { resize: vertical; min-height: 110px; }
+
+    .fg select { cursor: pointer; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .btn-submit {
+      background: var(--gold);
+      color: #080808;
+      border: none;
+      padding: 15px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: background 0.2s;
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .btn-submit:hover { background: var(--gold-light); }
+
+    /* ── BOOKING ── */
+    #booking {
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .booking-hd { text-align: center; margin-bottom: 56px; }
+    .booking-hd .tag { justify-content: center; }
+    .booking-hd .tag::before { display: none; }
+    .booking-hd p { color: var(--muted); max-width: 500px; margin: 0 auto; font-size: 0.92rem; }
+
+    .booking-contact-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 52px;
+      align-items: start;
+    }
+    .booking-left { display: flex; flex-direction: column; gap: 16px; }
+
+    /* Calendar panel */
+    .cal-panel { border: 1px solid var(--border); background: var(--bg); padding: 28px; }
+
+    .cal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .cal-nav-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+
+    .cal-nav-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    .cal-month-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .cal-weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      margin-bottom: 4px;
+    }
+
+    .cal-weekdays span {
+      text-align: center;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 6px 0;
+    }
+
+    .cal-days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+    }
+
+    .cal-day {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.82rem;
+      cursor: default;
+      position: relative;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+      user-select: none;
+    }
+
+    .cal-day.other-month { color: rgba(242,237,228,0.15); }
+    .cal-day.past { color: rgba(122,112,96,0.5); cursor: not-allowed; }
+
+    .cal-day.today {
+      border-color: var(--muted);
+      font-weight: 600;
+    }
+
+    .cal-day.available { cursor: pointer; }
+
+    .cal-day.available:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.08);
+      color: var(--gold);
+    }
+
+    .cal-day.selected {
+      background: var(--gold);
+      color: #080808;
+      font-weight: 700;
+      border-color: var(--gold);
+    }
+
+    .cal-day.fully-booked { cursor: pointer; color: var(--muted); }
+
+    .cal-day.fully-booked::after {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--red-bright);
+    }
+
+    .cal-day.fully-booked:hover { border-color: var(--red-bright); color: var(--red-bright); }
+
+    /* Time slots */
+    .time-slots-wrap {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    .time-slots-hd {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .time-slots-date {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .time-slots-lbl {
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .slots-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .slot-btn {
+      border: 1px solid var(--border);
+      background: none;
+      color: var(--text);
+      padding: 11px 6px;
+      font-size: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+      letter-spacing: 0.03em;
+      line-height: 1.2;
+    }
+
+    .slot-btn.available:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.08);
+      color: var(--gold);
+    }
+
+    .slot-btn.booked {
+      color: var(--muted);
+      border-color: rgba(212,66,53,0.25);
+      cursor: pointer;
+    }
+
+    .slot-btn.booked span.slot-reserved {
+      display: block;
+      font-size: 0.52rem;
+      letter-spacing: 0.1em;
+      color: var(--red-bright);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .slot-btn.booked:hover { border-color: var(--red-bright); color: var(--red-bright); }
+
+    /* Sidebar */
+    .booking-sidebar { display: flex; flex-direction: column; gap: 16px; }
+
+    .booking-legend {
+      border: 1px solid var(--border);
+      padding: 18px 22px;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .legend-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    .legend-dot.avail { background: var(--gold); }
+    .legend-dot.booked-dot { background: var(--red-bright); }
+    .legend-dot.today-dot { background: transparent; border: 2px solid var(--muted); }
+
+    .booking-note {
+      border: 1px solid var(--border);
+      padding: 20px 22px;
+      background: var(--bg);
+    }
+
+    .booking-note p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 10px;
+    }
+
+    .booking-note p:last-child { margin-bottom: 0; }
+    .booking-note strong { color: var(--gold); }
+
+    .sidebar-empty {
+      border: 1px solid var(--border);
+      padding: 36px 22px;
+      text-align: center;
+      background: var(--bg);
+    }
+
+    .sidebar-empty .sidebar-emoji { font-size: 2rem; display: block; margin-bottom: 12px; }
+    .sidebar-empty p { font-size: 0.83rem; color: var(--muted); line-height: 1.7; }
+
+    .sidebar-selected {
+      border: 1px solid var(--border-s);
+      padding: 22px;
+      background: rgba(201,168,76,0.04);
+    }
+
+    .sidebar-selected-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-selected-date {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .sidebar-prompt {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 6px;
+    }
+
+    /* ── BOOKING WIZARD ── */
+    .bw-progress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 48px;
+    }
+    .bw-step { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .bw-dot {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--border-s);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      transition: all 0.3s;
+      flex-shrink: 0;
+    }
+    .bw-step.active .bw-dot { background: var(--gold); border-color: var(--gold); color: #080808; }
+    .bw-step.done  .bw-dot  { background: #2d8a55;    border-color: #2d8a55;    color: #fff;    }
+    .bw-step span {
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .bw-step.active span { color: var(--gold); }
+    .bw-step.done  span  { color: #2d8a55; }
+    .bw-line { flex: 1; max-width: 72px; min-width: 20px; height: 1px; background: var(--border); margin: 0 4px 20px; }
+
+    .bw-slot-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 14px 20px;
+      border: 1px solid var(--border-s);
+      background: rgba(201,168,76,0.05);
+      margin-bottom: 36px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .bw-slot-banner strong { color: var(--text); }
+    .bw-change {
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      text-decoration: underline;
+      padding: 0;
+      white-space: nowrap;
+    }
+
+    .bw-panel { max-width: 580px; margin: 0 auto; }
+    .bw-panel h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 1.85rem);
+      font-weight: 700;
+      margin-bottom: 28px;
+    }
+    .bw-actions { display: flex; gap: 12px; margin-top: 22px; }
+    .bw-actions > * { flex: 1; text-align: center; }
+
+    .bw-success-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(45,138,85,0.12);
+      border: 2px solid #2d8a55;
+      color: #2d8a55;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 22px;
+    }
+
+    .form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .deposit-summary { border: 1px solid var(--border); overflow: hidden; margin-bottom: 4px; }
+    .deposit-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 18px;
+      font-size: 0.86rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .deposit-row:last-child { border-bottom: none; }
+    .deposit-row--gold { background: rgba(201,168,76,0.07); color: var(--gold); font-weight: 600; font-family: 'Playfair Display', serif; }
+    .deposit-row--muted { color: var(--muted); }
+
+    @media (max-width: 560px) {
+      .form-2col { grid-template-columns: 1fr; }
+      .bw-actions { flex-direction: column; }
+    }
+
+    /* ── HERO ILLUSTRATION ── */
+    .hero-illust-wrap {
+      position: absolute;
+      right: 2%;
+      bottom: 60px;
+      width: 38%;
+      max-width: 420px;
+      min-width: 240px;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.88;
+    }
+
+    .hero-illust {
+      width: 100%;
+      height: auto;
+      animation: illust-bob 7s ease-in-out infinite;
+      filter: drop-shadow(0 24px 56px rgba(201,168,76,0.16));
+    }
+
+    .illust-spark1 {
+      animation: spark-twinkle 3s ease-in-out infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .illust-spark2 {
+      animation: spark-twinkle 3s ease-in-out infinite 1.5s;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    .illust-swirl { animation: swirl-glow 10s ease-in-out infinite; }
+
+    @keyframes illust-bob {
+      0%,100% { transform: translateY(0px)   rotate(0deg); }
+      40%      { transform: translateY(-22px) rotate(0.5deg); }
+      70%      { transform: translateY(-10px) rotate(-0.3deg); }
+    }
+
+    @keyframes spark-twinkle {
+      0%,100% { opacity: 0.12; transform: scale(0.6)  rotate(-12deg); }
+      50%      { opacity: 1;    transform: scale(1.35) rotate(12deg);  }
+    }
+
+    @keyframes swirl-glow {
+      0%,100% { opacity: 0.2; }
+      50%      { opacity: 0.5; }
+    }
+
+    /* ── DECORATIVE GRAPHICS ── */
+
+    /* Food emoji wrapper */
+    .food-icon {
+      display: block;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 0 14px rgba(201,168,76,0.4));
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .menu-card:hover .food-icon,
+    .menu-featured:hover .food-icon { transform: scale(1.18) translateY(-3px); }
+
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero-illust-wrap { width: 54%; right: -30px; opacity: 0.38; }
+      .booking-contact-grid { grid-template-columns: 1fr; }
+      .form-2col { grid-template-columns: 1fr; }
+      .slots-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .menu-featured { grid-template-columns: 1fr; }
+      .featured-img { min-height: 200px; }
+      .featured-body { padding: 32px 28px; }
+      .menu-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      section { padding: 72px 18px; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero-btns { flex-direction: column; align-items: center; }
+    }
+
+    /* ── ANNOUNCE BAR ── */
+    .announce-bar {
+      background: var(--red);
+      color: rgba(242,237,228,0.92);
+      text-align: center;
+      padding: 11px 24px;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 100;
+    }
+    .announce-bar a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-weight: 700;
+      margin-left: 6px;
+    }
+    .announce-bar a:hover { text-decoration: underline; }
+
+    /* ── OCCASIONS ── */
+    #occasions {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px;
+    }
+    .occasions-hd {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .occasions-hd .tag { justify-content: center; }
+    .occasions-hd .tag::before { display: none; }
+    .occasions-hd p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .occasion-pill {
+      border: 1px solid var(--border-s);
+      color: var(--text);
+      padding: 13px 28px;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 0.22s;
+      cursor: default;
+      border-radius: 50px;
+    }
+    .occasion-pill:hover {
+      border-color: var(--gold);
+      color: #080808;
+      background: var(--gold);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      padding: 64px 48px 36px;
+      text-align: left;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 48px;
+      max-width: 1120px;
+      margin: 0 auto 48px;
+    }
+    .footer-col-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 20px;
+    }
+    .footer-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+    }
+    .footer-nav-links a {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+      letter-spacing: 0.04em;
+    }
+    .footer-nav-links a:hover { color: var(--gold); }
+    .footer-center-col { text-align: center; }
+    .footer-logo-lg {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .footer-tagline-sm {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .footer-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+    .footer-info-list a,
+    .footer-info-list span {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .footer-info-list a:hover { color: var(--gold); }
+    .footer-right-col { display: flex; flex-direction: column; align-items: flex-end; }
+    .footer-social-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 44px);
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      max-width: 1120px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    footer small { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+    @media (max-width: 900px) {
+      footer { padding: 52px 24px 32px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+      .footer-right-col { align-items: flex-start; }
+    }
+    @media (max-width: 560px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-center-col { text-align: left; }
+      .footer-info-list { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCE BAR -->
+<div class="announce-bar">
+  Now booking summer &amp; fall events in Grand Junction, CO &nbsp;&mdash;&nbsp;<a href="#booking">Check your date &rarr;</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">DOTOGO</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#order">How to Order</a></li>
+    <li><a href="#booking">Book & Contact</a></li>
+  </ul>
+  <a href="#booking" class="nav-cta">Book Now</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Vietnamese Home Catering</div>
+    <h1 class="hero-title"><span class="accent">DoToGo</span><br>Catering</h1>
+    <p class="hero-tagline">Authentic flavors, made with love</p>
+    <p class="hero-desc">Fresh Vietnamese dishes crafted to order from our home kitchen — perfect for gatherings, events, and celebrations of all sizes.</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-gold">View the Menu</a>
+      <a href="#contact" class="btn-ghost">Place an Order</a>
+    </div>
+  </div>
+  <!-- Chopstick illustration -->
+  <div class="hero-illust-wrap" aria-hidden="true">
+    <svg class="hero-illust" viewBox="0 0 540 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="hl-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stop-color="rgba(201,168,76,0.22)"/>
+          <stop offset="60%"  stop-color="rgba(201,168,76,0.07)"/>
+          <stop offset="100%" stop-color="rgba(201,168,76,0)"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Decorative orbit rings (match reference style) -->
+      <ellipse class="illust-swirl"
+               cx="430" cy="115" rx="105" ry="58"
+               stroke="rgba(201,168,76,0.32)" stroke-width="1.6" fill="none"
+               transform="rotate(-28,430,115)"/>
+      <ellipse cx="448" cy="95" rx="72" ry="40"
+               stroke="rgba(201,168,76,0.16)" stroke-width="1.1" fill="none"
+               transform="rotate(-28,448,95)"/>
+      <ellipse cx="415" cy="135" rx="40" ry="22"
+               stroke="rgba(201,168,76,0.1)" stroke-width="0.8" fill="none"
+               transform="rotate(-28,415,135)"/>
+
+      <!-- Circle glow backdrop (frames the food) -->
+      <circle cx="168" cy="160" r="140" fill="url(#hl-glow)"/>
+      <circle cx="168" cy="160" r="140" stroke="rgba(201,168,76,0.22)" stroke-width="1.5"/>
+
+      <!-- HAND: palm base (rotated to follow chopstick angle ~37°) -->
+      <ellipse cx="462" cy="360" rx="57" ry="31" fill="#954e2c" transform="rotate(-37,462,360)"/>
+
+      <!-- Thumb (sits below chopstick bundle) -->
+      <ellipse cx="418" cy="393" rx="27" ry="10" fill="#8a4428" transform="rotate(127,418,393)"/>
+      <ellipse cx="418" cy="390" rx="19" ry="6"  fill="rgba(180,100,55,0.38)" transform="rotate(127,418,390)"/>
+
+      <!-- CHOPSTICK 1 (upper) — drawn before fingers so fingers layer on top -->
+      <line x1="109" y1="96"  x2="449" y2="350" stroke="rgba(0,0,0,0.32)"  stroke-width="17" stroke-linecap="round"/>
+      <line x1="109" y1="96"  x2="449" y2="350" stroke="#9e7a18"            stroke-width="14" stroke-linecap="round"/>
+      <line x1="109" y1="96"  x2="449" y2="350" stroke="#c9a84c"            stroke-width="11" stroke-linecap="round"/>
+      <!-- Darker lacquered grip section -->
+      <line x1="398" y1="309" x2="449" y2="350" stroke="#6a5010"            stroke-width="14" stroke-linecap="round"/>
+      <line x1="398" y1="309" x2="449" y2="350" stroke="#9a7820"            stroke-width="11" stroke-linecap="round"/>
+      <!-- Specular highlight streak -->
+      <line x1="109" y1="96"  x2="449" y2="350" stroke="rgba(255,245,190,0.38)" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- CHOPSTICK 2 (lower) -->
+      <line x1="122" y1="114" x2="462" y2="368" stroke="rgba(0,0,0,0.32)"  stroke-width="17" stroke-linecap="round"/>
+      <line x1="122" y1="114" x2="462" y2="368" stroke="#9e7a18"            stroke-width="14" stroke-linecap="round"/>
+      <line x1="122" y1="114" x2="462" y2="368" stroke="#c9a84c"            stroke-width="11" stroke-linecap="round"/>
+      <!-- Grip section -->
+      <line x1="411" y1="327" x2="462" y2="368" stroke="#6a5010"            stroke-width="14" stroke-linecap="round"/>
+      <line x1="411" y1="327" x2="462" y2="368" stroke="#9a7820"            stroke-width="11" stroke-linecap="round"/>
+      <line x1="122" y1="114" x2="462" y2="368" stroke="rgba(255,245,190,0.38)" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- FINGERS (drawn over chopsticks so they appear to grip) -->
+      <!-- Index finger -->
+      <ellipse cx="442" cy="313" rx="27" ry="10" fill="#954e2c" transform="rotate(-53,442,313)"/>
+      <ellipse cx="442" cy="311" rx="19" ry="6"  fill="rgba(180,95,55,0.42)" transform="rotate(-53,442,311)"/>
+      <!-- Middle finger -->
+      <ellipse cx="458" cy="325" rx="28" ry="10" fill="#954e2c" transform="rotate(-53,458,325)"/>
+      <ellipse cx="458" cy="323" rx="20" ry="6"  fill="rgba(180,95,55,0.42)" transform="rotate(-53,458,323)"/>
+      <!-- Ring finger -->
+      <ellipse cx="474" cy="337" rx="23" ry="9"  fill="#954e2c" transform="rotate(-53,474,337)"/>
+      <ellipse cx="474" cy="335" rx="16" ry="5"  fill="rgba(180,95,55,0.42)" transform="rotate(-53,474,335)"/>
+
+      <!-- GYOZA / POTSTICKER — elongated with pleated seam, pointed ends, juice drip -->
+      <g transform="translate(110,108) rotate(-30)">
+        <!-- Drop shadow -->
+        <ellipse cx="4" cy="38" rx="54" ry="14" fill="rgba(0,0,0,0.22)" transform="translate(5,10)"/>
+        <!-- Main rounded body -->
+        <ellipse cx="0" cy="28" rx="52" ry="27" fill="#f0e4c8"/>
+        <!-- Volume shading — lower half darker -->
+        <ellipse cx="5" cy="42" rx="38" ry="16" fill="rgba(170,130,62,0.22)"/>
+        <!-- Specular highlight (glossy skin look) -->
+        <ellipse cx="-10" cy="10" rx="24" ry="13" fill="rgba(255,255,255,0.3)" transform="rotate(-18,-10,10)"/>
+        <ellipse cx="8"   cy="22" rx="10" ry="6"  fill="rgba(255,255,255,0.14)" transform="rotate(-10,8,22)"/>
+        <!-- PLEAT SEAM — the defining feature of a gyoza -->
+        <!-- Fill behind pleats -->
+        <path d="M -44,8 Q -36,-7 -26,8 Q -16,-7 -6,8 Q 4,-7 14,8 Q 24,-7 34,8 L 44,8 L 44,14 L -44,14 Z"
+              fill="#dcc8a0"/>
+        <!-- Pleat outline (gold) -->
+        <path d="M -44,8 Q -36,-7 -26,8 Q -16,-7 -6,8 Q 4,-7 14,8 Q 24,-7 34,8 L 44,8"
+              fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Crease lines from each pleat valley down the body -->
+        <line x1="-26" y1="8"  x2="-24" y2="38" stroke="rgba(148,110,42,0.44)" stroke-width="1.3" stroke-linecap="round"/>
+        <line x1="-6"  y1="8"  x2="-5"  y2="40" stroke="rgba(148,110,42,0.44)" stroke-width="1.3" stroke-linecap="round"/>
+        <line x1="14"  y1="8"  x2="15"  y2="39" stroke="rgba(148,110,42,0.44)" stroke-width="1.3" stroke-linecap="round"/>
+        <line x1="34"  y1="8"  x2="33"  y2="36" stroke="rgba(148,110,42,0.44)" stroke-width="1.3" stroke-linecap="round"/>
+        <!-- LEFT pointed tail — characteristic gyoza shape -->
+        <path d="M -44,8 C -50,1 -62,10 -55,19 C -52,22 -47,18 -44,13 Z"
+              fill="#e2cda0" stroke="#c9a84c" stroke-width="1.6" stroke-linejoin="round"/>
+        <!-- RIGHT pointed tail -->
+        <path d="M 44,8 C 50,1 62,10 55,19 C 52,22 47,18 44,13 Z"
+              fill="#e2cda0" stroke="#c9a84c" stroke-width="1.6" stroke-linejoin="round"/>
+        <!-- Body outline -->
+        <ellipse cx="0" cy="28" rx="52" ry="27" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
+        <!-- Sesame seeds on body surface -->
+        <circle cx="-10" cy="40" r="2.5" fill="rgba(148,110,40,0.6)"/>
+        <circle cx="14"  cy="46" r="2.5" fill="rgba(148,110,40,0.6)"/>
+        <circle cx="30"  cy="37" r="2"   fill="rgba(148,110,40,0.5)"/>
+        <circle cx="-30" cy="38" r="2"   fill="rgba(148,110,40,0.5)"/>
+        <circle cx="2"   cy="50" r="1.8" fill="rgba(148,110,40,0.45)"/>
+        <!-- Juice drip from bottom (like in the reference!) -->
+        <path d="M 6,55 C 5,62 4,70 7,75 C 9,77 12,75 11,68 C 10,64 8,59 6,55 Z"
+              fill="rgba(210,155,25,0.8)"/>
+        <!-- Small drip dot below main drip -->
+        <circle cx="8" cy="80" r="2.5" fill="rgba(210,155,25,0.5)"/>
+      </g>
+      <!-- Floating sesame seeds in scene -->
+      <circle cx="70"  cy="184" r="3"   fill="rgba(201,168,76,0.52)"/>
+      <circle cx="155" cy="198" r="2.5" fill="rgba(201,168,76,0.46)"/>
+      <circle cx="60"  cy="208" r="2"   fill="rgba(201,168,76,0.4)"/>
+
+      <!-- SPARKLE STARS -->
+      <g class="illust-spark1">
+        <path d="M155,352 L159,340 L163,352 L175,356 L163,360 L159,372 L155,360 L143,356 Z" fill="#c9a84c"/>
+        <path d="M159,346 L160,340 L161,346 L167,348 L161,350 L160,356 L159,350 L153,348 Z" fill="rgba(255,248,195,0.85)"/>
+      </g>
+      <g class="illust-spark2">
+        <path d="M196,385 L199,377 L202,385 L210,388 L202,391 L199,399 L196,391 L188,388 Z" fill="#c9a84c" opacity="0.8"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-bar"></div>
+    <span class="scroll-label">Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-body">
+        <div class="tag">Our Story</div>
+        <h2 class="section-title">Real Food,<br>Real Flavors</h2>
+        <div class="gold-rule"></div>
+        <p>What started as a passion for authentic Vietnamese cooking has grown into something worth sharing. Every dish is prepared from scratch using traditional techniques and quality ingredients — no shortcuts, no compromises.</p>
+        <p>Operating from a home kitchen means we keep it personal. Small batches, big flavor, and genuine care in every single plate. Whether you're feeding your family or hosting an event, we've got you covered.</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-val">5</span>
+          <span class="stat-lbl">Signature Dishes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">100%</span>
+          <span class="stat-lbl">Home Cooked</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">Fresh</span>
+          <span class="stat-lbl">Made to Order</span>
+        </div>
+        <div class="stat">
+          <span class="stat-val">Local</span>
+          <span class="stat-lbl">Pickup & Delivery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OCCASIONS -->
+<section id="occasions">
+  <div class="container">
+    <div class="occasions-hd">
+      <div class="tag">We Cater For</div>
+      <h2 class="section-title">Every Occasion</h2>
+      <div class="gold-rule" style="margin:22px auto"></div>
+      <p>From intimate family dinners to large corporate events — if there's a gathering, we'll feed it well.</p>
+    </div>
+    <div class="pill-row">
+      <span class="occasion-pill">Birthday Parties</span>
+      <span class="occasion-pill">Family Reunions</span>
+      <span class="occasion-pill">Corporate Lunches</span>
+      <span class="occasion-pill">Wedding Receptions</span>
+      <span class="occasion-pill">Holiday Gatherings</span>
+      <span class="occasion-pill">Graduation Parties</span>
+      <span class="occasion-pill">Baby Showers</span>
+      <span class="occasion-pill">Community Events</span>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="container">
+    <div class="menu-hd">
+      <span class="rotating-tag">&#8635; Rotating Seasonal Menu</span>
+      <div class="tag">What We Offer</div>
+      <h2 class="section-title">Our Menu</h2>
+      <p>Five options priced per person — each dish is costed differently based on ingredients. The lineup rotates seasonally, so check back for what's current.</p>
+    </div>
+
+    <!-- Featured: Egg Rolls -->
+    <div class="menu-featured">
+      <div class="featured-img"><span class="food-icon">🥚</span></div>
+      <div class="featured-body">
+        <span class="menu-num">01 — Signature</span>
+        <span class="featured-badge">Bestseller</span>
+        <h3 class="menu-name">Crispy Egg Rolls</h3>
+        <p class="menu-desc">Golden-fried egg rolls packed with seasoned pork, glass noodles, and fresh vegetables. Each roll is hand-wrapped and fried to order, served with our house sweet chili dipping sauce. A crowd favorite every time.</p>
+        <div class="price-row">
+          <span class="menu-price">$14 <span class="per-person">/ person</span></span>
+        </div>
+        <span class="min-note">Min. 10 guests &nbsp;·&nbsp; Subject to change with rotation</span>
+      </div>
+    </div>
+
+    <!-- 4-card grid -->
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="card-img"><span class="food-icon">🍜</span></div>
+        <div class="card-body">
+          <span class="card-num">02 — Signature</span>
+          <h3 class="card-name">Phở Noodle Soup</h3>
+          <p class="card-desc">Slow-simmered broth with rice noodles, tender beef, fresh herbs, bean sprouts, and lime. Vietnamese comfort in every bowl.</p>
+          <span class="card-price">$18 <span class="per-person">/ person</span></span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="card-img"><span class="food-icon">🌿</span></div>
+        <div class="card-body">
+          <span class="card-num">03 — Signature</span>
+          <h3 class="card-name">Gỏi Cuốn (Spring Rolls)</h3>
+          <p class="card-desc">Fresh rice paper rolls filled with shrimp, vermicelli noodles, herbs, and lettuce. Paired with rich peanut dipping sauce.</p>
+          <span class="card-price">$12 <span class="per-person">/ person</span></span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="card-img"><span class="food-icon">🥖</span></div>
+        <div class="card-body">
+          <span class="card-num">04 — Signature</span>
+          <h3 class="card-name">Bánh Mì Sandwich</h3>
+          <p class="card-desc">Crusty baguette layered with seasoned meat, pickled daikon, jalapeños, cilantro, and house aioli. Bold flavors, perfect grab-and-go.</p>
+          <span class="card-price">$13 <span class="per-person">/ person</span></span>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <div class="card-img"><span class="food-icon">🍚</span></div>
+        <div class="card-body">
+          <span class="card-num">05 — Signature</span>
+          <h3 class="card-name">Cơm Tấm (Broken Rice)</h3>
+          <p class="card-desc">Vietnamese broken rice served with grilled pork chop, shredded pork skin, steamed egg meatloaf, and house fish sauce.</p>
+          <span class="card-price">$16 <span class="per-person">/ person</span></span>
+        </div>
+      </div>
+    </div>
+
+    <p class="menu-note">All prices are per person &nbsp;·&nbsp; Min. 10 guests per order &nbsp;·&nbsp; 48-hr advance notice preferred &nbsp;·&nbsp; Menu rotates seasonally — current options above</p>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section id="order">
+  <div class="container">
+    <div class="order-hd">
+      <div class="tag">Simple Process</div>
+      <h2 class="section-title">How to Order</h2>
+      <p>No apps, no middleman — just reach out directly and we'll take care of the rest.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-icon">📋</span>
+        <span class="step-n">01</span>
+        <h3 class="step-title">Browse & Choose</h3>
+        <p class="step-desc">Pick from our 5 signature dishes. Mix and match for your event. Have questions about portions? Just ask.</p>
+      </div>
+      <div class="step">
+        <span class="step-icon">📅</span>
+        <span class="step-n">02</span>
+        <h3 class="step-title">Book Your Date</h3>
+        <p class="step-desc">Pick a date on the calendar below to lock in your spot with a deposit — or send a message if you have questions first.</p>
+      </div>
+      <div class="step">
+        <span class="step-icon">🎉</span>
+        <span class="step-n">03</span>
+        <h3 class="step-title">Pick Up & Enjoy</h3>
+        <p class="step-desc">Swing by for pickup or arrange local delivery. Fresh, hot, and ready exactly when you need it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING & CONTACT -->
+<section id="booking">
+  <div class="container">
+
+    <!-- PANEL 0: Calendar + Contact (default view) -->
+    <div id="bpanel-0">
+      <div class="booking-hd">
+        <div class="tag">Reserve Your Date</div>
+        <h2 class="section-title">Book Your Event</h2>
+        <p>Pick a date and time to lock in your spot — or reach out directly with questions.</p>
+      </div>
+
+      <div class="booking-contact-grid">
+
+        <!-- LEFT: Calendar -->
+        <div class="booking-left">
+          <div class="cal-panel">
+            <div class="cal-header">
+              <button class="cal-nav-btn" id="prev-month">&#8592;</button>
+              <span class="cal-month-label" id="cal-month-label"></span>
+              <button class="cal-nav-btn" id="next-month">&#8594;</button>
+            </div>
+            <div class="cal-weekdays">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div class="cal-days" id="cal-days"></div>
+            <div class="time-slots-wrap" id="time-slots-wrap" style="display:none">
+              <div class="time-slots-hd">
+                <span class="time-slots-date" id="time-slots-date"></span>
+                <span class="time-slots-lbl">Choose a time</span>
+              </div>
+              <div class="slots-grid" id="slots-grid"></div>
+            </div>
+          </div>
+          <div class="booking-sidebar">
+            <div class="booking-legend">
+              <div class="legend-row"><span class="legend-dot avail"></span><span>Available to book</span></div>
+              <div class="legend-row"><span class="legend-dot booked-dot"></span><span>Reserved — click for contact info</span></div>
+              <div class="legend-row"><span class="legend-dot today-dot"></span><span>Today</span></div>
+            </div>
+            <div id="sidebar-body">
+              <div class="sidebar-empty">
+                <span class="sidebar-emoji">&#128197;</span>
+                <p>Pick a date from the calendar to see available time slots.</p>
+              </div>
+            </div>
+            <div class="booking-note">
+              <p>A <strong>50% deposit</strong> is required to lock in your event date. The remaining balance is due on event day.</p>
+              <p>Need to talk it through first? Call or text us anytime.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact Info + Message Form -->
+        <div>
+          <div class="tag">Get in Touch</div>
+          <h3 class="section-title" style="font-size:clamp(1.5rem,3vw,2rem)">Questions?<br>Reach Out.</h3>
+          <div class="gold-rule"></div>
+          <p style="color:var(--muted); line-height:1.85; font-size:0.92rem; margin-bottom:28px;">Reach out directly to place an order or ask anything. We recommend at least 48 hours notice for larger orders — sooner is always better.</p>
+          <div class="contact-items" style="margin-top:0; margin-bottom:28px;">
+            <a href="tel:+10000000000" class="citem">
+              <span class="citem-icon">📞</span>
+              <div>
+                <span class="citem-lbl">Call or Text</span>
+                <span class="citem-val">(XXX) XXX-XXXX</span>
+              </div>
+            </a>
+            <a href="mailto:hello@dotogo.com" class="citem">
+              <span class="citem-icon">✉️</span>
+              <div>
+                <span class="citem-lbl">Email</span>
+                <span class="citem-val">hello@dotogo.com</span>
+              </div>
+            </a>
+          </div>
+          <span class="form-label">Or Send a Message</span>
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="fg">
+                <label>First Name</label>
+                <input type="text" placeholder="Your first name" required>
+              </div>
+              <div class="fg">
+                <label>Last Name</label>
+                <input type="text" placeholder="Last name">
+              </div>
+            </div>
+            <div class="fg">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="(XXX) XXX-XXXX">
+            </div>
+            <div class="fg">
+              <label>What Are You Ordering?</label>
+              <select required>
+                <option value="" disabled selected>Select a dish...</option>
+                <option>Crispy Egg Rolls</option>
+                <option>Ph&#7903; Noodle Soup</option>
+                <option>G&#7887;i Cu&#7889;n (Spring Rolls)</option>
+                <option>B&aacute;nh M&igrave; Sandwich</option>
+                <option>C&#417;m T&#7845;m (Broken Rice)</option>
+                <option>Multiple dishes / Full event</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Event Date &amp; Details</label>
+              <textarea placeholder="Tell us your event date, headcount, any dietary needs, and anything else we should know..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Order Request</button>
+          </form>
+        </div>
+
+      </div>
+    </div><!-- /bpanel-0 -->
+
+    <!-- WIZARD: Steps 1-3 (shown after time is picked) -->
+    <div id="bpanel-wizard" style="display:none">
+
+      <!-- Progress bar -->
+      <div class="bw-progress">
+        <div class="bw-step" id="bws1">
+          <div class="bw-dot">1</div>
+          <span>Details</span>
+        </div>
+        <div class="bw-line"></div>
+        <div class="bw-step" id="bws2">
+          <div class="bw-dot">2</div>
+          <span>Payment</span>
+        </div>
+        <div class="bw-line"></div>
+        <div class="bw-step" id="bws3">
+          <div class="bw-dot">&#10003;</div>
+          <span>Confirmed</span>
+        </div>
+      </div>
+
+      <!-- Selected slot banner -->
+      <div class="bw-slot-banner">
+        <span>&#128197; <strong id="bw-date"></strong> &nbsp;&#183;&nbsp; &#128336; <strong id="bw-time"></strong></span>
+        <button class="bw-change" onclick="showPanel(0)">&#8592; Change date</button>
+      </div>
+
+      <!-- Step 1: Event Details -->
+      <div id="bpanel-1" class="bw-panel">
+        <h3>Tell Us About Your Event</h3>
+        <div class="form-2col">
+          <div class="fg"><label>First Name *</label><input id="b-fname" type="text" placeholder="First name"></div>
+          <div class="fg"><label>Last Name *</label><input id="b-lname" type="text" placeholder="Last name"></div>
+        </div>
+        <div class="form-2col" style="margin-top:12px">
+          <div class="fg"><label>Email *</label><input id="b-email" type="email" placeholder="your@email.com"></div>
+          <div class="fg"><label>Phone *</label><input id="b-phone" type="tel" placeholder="(XXX) XXX-XXXX"></div>
+        </div>
+        <div class="fg" style="margin-top:12px">
+          <label>Dish Selection</label>
+          <select id="b-dish">
+            <option value="">Select a dish...</option>
+            <option value="Crispy Egg Rolls"       data-price="14">Crispy Egg Rolls — $14/person</option>
+            <option value="Phở Noodle Soup"         data-price="18">Ph&#7903; Noodle Soup — $18/person</option>
+            <option value="Spring Rolls"             data-price="12">G&#7887;i Cu&#7889;n (Spring Rolls) — $12/person</option>
+            <option value="Bánh Mì Sandwich"         data-price="13">B&aacute;nh M&igrave; Sandwich — $13/person</option>
+            <option value="Cơm Tấm (Broken Rice)"   data-price="16">C&#417;m T&#7845;m (Broken Rice) — $16/person</option>
+            <option value="Multiple dishes"           data-price="0">Multiple dishes / Full event package</option>
+          </select>
+        </div>
+        <div class="form-2col" style="margin-top:12px">
+          <div class="fg"><label>Guest Count</label><input id="b-guests" type="number" min="1" placeholder="e.g. 30" oninput="autoCalcTotal()"></div>
+          <div class="fg"><label>Estimated Total ($) <span style="color:var(--gold);font-size:0.65rem">auto-calculated</span></label><input id="b-total" type="number" min="0" placeholder="Auto-fills from dish × guests" oninput="updateDeposit()"></div>
+        </div>
+        <div class="fg" style="margin-top:12px">
+          <label>Notes / Special Requests</label>
+          <textarea id="b-notes" placeholder="Location, dietary needs, setup requests..."></textarea>
+        </div>
+        <div class="bw-actions">
+          <button class="btn-ghost" onclick="showPanel(0)">&#8592; Change Date</button>
+          <button class="btn-gold" onclick="goToPayment()">Continue to Payment &#8594;</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Payment -->
+      <div id="bpanel-2" class="bw-panel" style="display:none">
+        <h3>Secure Your Reservation</h3>
+        <div class="deposit-summary">
+          <div class="deposit-row"><span>Estimated Total</span><span id="dep-total">—</span></div>
+          <div class="deposit-row deposit-row--gold"><span>50% Deposit Due Now</span><span id="dep-amount">—</span></div>
+          <div class="deposit-row deposit-row--muted"><span>Balance Due on Event Day</span><span id="dep-balance">—</span></div>
+        </div>
+        <p style="font-size:0.82rem;color:var(--muted);margin:20px 0 14px;line-height:1.65;">Send the deposit amount above via PayPal or Venmo. Once sent, click confirm below to lock in your date.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:6px">
+          <a id="paypal-btn" href="PAYPAL_LINK_HERE" target="_blank" rel="noopener" class="btn-gold" style="display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;padding:15px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 6.082-8.558 6.082H9.83l-1.182 7.49h3.396c.483 0 .894-.347.968-.823l.04-.207.768-4.86.05-.265a.985.985 0 0 1 .97-.823h.611c3.944 0 7.03-1.601 7.931-6.237.38-1.952.183-3.583-.16-4.07z"/></svg>
+            Pay via PayPal
+          </a>
+          <a id="venmo-btn" href="VENMO_LINK_HERE" target="_blank" rel="noopener" class="btn-ghost" style="display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;padding:15px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.548 1.386c.412.677.6 1.374.6 2.26 0 2.813-2.4 6.467-4.349 9.033H11.24L9.3 2.56l-4.05.388L7.41 21.64h7.069c3.946-5.16 7.864-13.23 7.864-17.659 0-1.455-.306-2.438-.795-3.24z"/></svg>
+            Pay via Venmo
+          </a>
+        </div>
+        <div class="bw-actions">
+          <button class="btn-ghost" onclick="showWizardStep(1)">&#8592; Back</button>
+          <button class="btn-gold" id="pay-btn" onclick="confirmBooking()">I've Sent My Payment &#10003;</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Confirmed -->
+      <div id="bpanel-3" class="bw-panel" style="display:none;text-align:center;padding:24px 0">
+        <div class="bw-success-icon">&#10003;</div>
+        <h3 style="text-align:center">You're Booked!</h3>
+        <p style="color:var(--gold);font-family:'Playfair Display',serif;font-style:italic;margin-bottom:16px" id="confirm-slot"></p>
+        <p style="font-size:0.87rem;color:var(--muted);line-height:1.78;margin-bottom:32px">Your date is locked in. We'll reach out within 24 hours to confirm all the details.</p>
+        <button class="btn-gold" onclick="showPanel(0)" style="display:block;width:100%;max-width:260px;margin:0 auto">Book Another Event</button>
+      </div>
+
+    </div><!-- /bpanel-wizard -->
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+
+    <!-- Left: Nav -->
+    <div>
+      <span class="footer-col-label">Navigate</span>
+      <ul class="footer-nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#occasions">Occasions</a></li>
+        <li><a href="#order">How to Order</a></li>
+        <li><a href="#booking">Book an Event</a></li>
+      </ul>
+    </div>
+
+    <!-- Center: Brand + Info -->
+    <div class="footer-center-col">
+      <span class="footer-logo-lg">DOTOGO</span>
+      <span class="footer-tagline-sm">Authentic Vietnamese flavors, made with love</span>
+      <div class="footer-info-list">
+        <span>Grand Junction, Colorado</span>
+        <a href="tel:+10000000000">(XXX) XXX-XXXX</a>
+        <a href="mailto:hello@dotogo.com">hello@dotogo.com</a>
+      </div>
+    </div>
+
+    <!-- Right: Social -->
+    <div class="footer-right-col">
+      <span class="footer-col-label">Follow Us</span>
+      <div class="footer-social-grid">
+        <a href="#" class="footer-social-btn" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="#" class="footer-social-btn" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" class="footer-social-btn" title="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+        <a href="#" class="footer-social-btn" title="Snapchat">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.065 2C9.168 2 6.235 3.578 5.065 6.273c-.51 1.152-.43 3.142-.354 4.593-.392.18-.853.283-1.373.14a1.487 1.487 0 0 0-.812.1c-.25.148-.436.393-.51.677-.073.284-.034.585.11.844.144.26.382.454.663.54.048.014 1.11.347 1.394 1.52-.27.155-.543.308-.805.44-.91.46-1.72.87-1.783 1.584-.062.71.492 1.245 1.246 1.43 2.193.541 3.144 2.097 3.185 2.161.303.493.683.739 1.15.739.201 0 .416-.046.66-.14.585-.225 1.258-.36 1.998-.36.752 0 1.437.138 2.037.37.232.086.433.131.626.131.476 0 .866-.256 1.171-.762.04-.065 1.003-1.663 3.186-2.14.746-.17 1.306-.707 1.246-1.42-.063-.716-.873-1.126-1.776-1.585-.265-.133-.538-.284-.808-.44.284-1.172 1.346-1.506 1.396-1.52.28-.087.518-.28.662-.54.144-.26.183-.56.11-.844-.074-.284-.26-.529-.51-.677-.25-.147-.538-.176-.812-.1-.52.143-.98.04-1.372-.14.076-1.452.154-3.441-.354-4.593C17.865 3.578 14.962 2 12.065 2z"/></svg>
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <small>© 2026 DoToGo &nbsp;·&nbsp; Vietnamese Home Catering &nbsp;·&nbsp; Grand Junction, CO &nbsp;·&nbsp; All rights reserved</small>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit');
+    btn.textContent = 'Message Sent!';
+    btn.style.background = '#2a7a4a';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = 'Send Order Request';
+      btn.style.background = '';
+      btn.style.color = '';
+      e.target.reset();
+    }, 3000);
+  }
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.menu-featured, .menu-card, .step, .stat, .citem').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+
+  // ── BOOKING CALENDAR ──────────────────────────────────────────────────────
+
+  const MONTH_NAMES = ['January','February','March','April','May','June',
+                       'July','August','September','October','November','December'];
+
+  // Available time slots per day
+  const TIME_SLOTS = ['10:00 AM','12:00 PM','2:00 PM','4:00 PM','6:00 PM','8:00 PM'];
+
+  // Bookings stored in localStorage keyed by "YYYY-MM-DD|||HH:MM AM/PM"
+  // When you integrate Outlook: replace this with Microsoft Graph API calls.
+  let bookings = JSON.parse(localStorage.getItem('dtg_bookings') || '{}');
+
+  let calYear, calMonth, selectedDate = null, selectedTime = null;
+
+  // Start on current month
+  const _now = new Date();
+  calYear  = _now.getFullYear();
+  calMonth = _now.getMonth();
+
+  function dateKey(y, m, d) {
+    return `${y}-${String(m+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+  }
+
+  function isSlotBooked(dk, time) { return !!bookings[dk + '|||' + time]; }
+
+  function isFullyBooked(dk) { return TIME_SLOTS.every(t => isSlotBooked(dk, t)); }
+
+  function renderCalendar() {
+    document.getElementById('cal-month-label').textContent =
+      MONTH_NAMES[calMonth] + ' ' + calYear;
+
+    const container = document.getElementById('cal-days');
+    container.innerHTML = '';
+
+    const firstWeekday   = new Date(calYear, calMonth, 1).getDay();
+    const daysInMonth    = new Date(calYear, calMonth + 1, 0).getDate();
+    const daysInPrevMonth = new Date(calYear, calMonth, 0).getDate();
+
+    const today = new Date(); today.setHours(0,0,0,0);
+
+    // Trailing days from previous month
+    for (let i = firstWeekday - 1; i >= 0; i--) {
+      const el = document.createElement('div');
+      el.className = 'cal-day other-month';
+      el.textContent = daysInPrevMonth - i;
+      container.appendChild(el);
+    }
+
+    // Days of current month
+    for (let day = 1; day <= daysInMonth; day++) {
+      const el = document.createElement('div');
+      el.className = 'cal-day';
+      el.textContent = day;
+
+      const cellDate = new Date(calYear, calMonth, day);
+      const dk = dateKey(calYear, calMonth, day);
+
+      if (cellDate < today) {
+        el.classList.add('past');
+      } else {
+        if (cellDate.getTime() === today.getTime()) el.classList.add('today');
+
+        if (isFullyBooked(dk)) {
+          el.classList.add('fully-booked');
+          el.title = 'Fully booked — click to see contact info';
+          el.addEventListener('click', () => openBookedModal(dk, null));
+        } else {
+          el.classList.add('available');
+          el.addEventListener('click', () => pickDate(dk, cellDate));
+        }
+
+        if (selectedDate === dk) el.classList.add('selected');
+      }
+
+      container.appendChild(el);
+    }
+
+    // Leading days for next month
+    const total = container.children.length;
+    const pad = total % 7 === 0 ? 0 : 7 - (total % 7);
+    for (let i = 1; i <= pad; i++) {
+      const el = document.createElement('div');
+      el.className = 'cal-day other-month';
+      el.textContent = i;
+      container.appendChild(el);
+    }
+  }
+
+  function pickDate(dk, cellDate) {
+    selectedDate = dk;
+    selectedTime = null;
+    renderCalendar();
+    renderSlots(dk, cellDate);
+    updateSidebar();
+  }
+
+  function renderSlots(dk, cellDate) {
+    const wrap = document.getElementById('time-slots-wrap');
+    const grid = document.getElementById('slots-grid');
+    document.getElementById('time-slots-date').textContent =
+      cellDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
+
+    grid.innerHTML = '';
+    TIME_SLOTS.forEach(time => {
+      const btn = document.createElement('button');
+      btn.className = 'slot-btn';
+      btn.innerHTML = time;
+
+      if (isSlotBooked(dk, time)) {
+        btn.classList.add('booked');
+        btn.innerHTML += '<span class="slot-reserved">Reserved</span>';
+        btn.addEventListener('click', () => openBookedModal(dk, time));
+      } else {
+        btn.classList.add('available');
+        btn.addEventListener('click', () => pickTime(dk, time, cellDate));
+      }
+      grid.appendChild(btn);
+    });
+
+    wrap.style.display = 'block';
+  }
+
+  function pickTime(dk, time, cellDate) {
+    selectedDate = dk;
+    selectedTime = time;
+    const label = cellDate.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', year:'numeric' });
+    document.getElementById('bw-date').textContent = label;
+    document.getElementById('bw-time').textContent = time;
+    showPanel(1);
+  }
+
+  function updateSidebar() {
+    const body = document.getElementById('sidebar-body');
+    if (!selectedDate) {
+      body.innerHTML = '<div class="sidebar-empty"><span class="sidebar-emoji">&#128197;</span><p>Pick a date from the calendar to see available time slots.</p></div>';
+      return;
+    }
+    const parts = selectedDate.split('-');
+    const d = new Date(+parts[0], +parts[1]-1, +parts[2]);
+    const label = d.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', year:'numeric' });
+    body.innerHTML = `
+      <div class="sidebar-selected">
+        <span class="sidebar-selected-label">Selected Date</span>
+        <div class="sidebar-selected-date">${label}</div>
+        <p class="sidebar-prompt">Now choose a time slot below the calendar.</p>
+      </div>`;
+  }
+
+  // ── PANEL NAVIGATION ─────────────────────────────────────────────────────
+
+  function showPanel(n) {
+    document.getElementById('bpanel-0').style.display      = n === 0 ? '' : 'none';
+    document.getElementById('bpanel-wizard').style.display = n !== 0 ? '' : 'none';
+    if (n !== 0) showWizardStep(n);
+    document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function showWizardStep(n) {
+    [1, 2, 3].forEach(i => {
+      document.getElementById('bpanel-' + i).style.display = i === n ? '' : 'none';
+      const step = document.getElementById('bws' + i);
+      step.classList.remove('active', 'done');
+      if (i < n)  step.classList.add('done');
+      if (i === n) step.classList.add('active');
+    });
+  }
+
+  function openBookedModal(dk, time) {
+    const parts = dk.split('-');
+    const d = new Date(+parts[0], +parts[1]-1, +parts[2]);
+    const label = d.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', year:'numeric' });
+    const slotText = time ? `${label} at ${time}` : label;
+    document.getElementById('sidebar-body').innerHTML = `
+      <div class="sidebar-selected">
+        <span class="sidebar-selected-label" style="color:var(--red-bright)">Slot Reserved</span>
+        <div style="font-size:0.85rem;color:var(--muted);line-height:1.7;margin-bottom:14px">
+          <strong style="color:var(--text);display:block;margin-bottom:6px">${slotText}</strong>
+          This slot is taken. Reach out to find another time.
+        </div>
+        <a href="tel:+10000000000" class="btn-gold" style="display:block;text-align:center;margin-bottom:8px;font-size:0.78rem;padding:12px">&#128222; (XXX) XXX-XXXX</a>
+        <a href="mailto:hello@dotogo.com" class="btn-ghost" style="display:block;text-align:center;font-size:0.78rem;padding:12px">&#9993; hello@dotogo.com</a>
+      </div>`;
+  }
+
+  function goToPayment() {
+    const fname = document.getElementById('b-fname').value.trim();
+    const email = document.getElementById('b-email').value.trim();
+    const phone = document.getElementById('b-phone').value.trim();
+    if (!fname || !email || !phone) {
+      alert('Please fill in your name, email, and phone number to continue.');
+      return;
+    }
+    updateDeposit();
+    showWizardStep(2);
+  }
+
+  // Per-person prices — update these to match current menu rotation
+  const DISH_PRICES = {
+    'Crispy Egg Rolls':       14,
+    'Phở Noodle Soup':        18,
+    'Spring Rolls':           12,
+    'Bánh Mì Sandwich':       13,
+    'Cơm Tấm (Broken Rice)':  16,
+    'Multiple dishes':         0,
+  };
+
+  function autoCalcTotal() {
+    const select  = document.getElementById('b-dish');
+    const guests  = parseInt(document.getElementById('b-guests').value) || 0;
+    const opt     = select.options[select.selectedIndex];
+    const price   = opt ? parseInt(opt.dataset.price || 0) : 0;
+    if (price > 0 && guests >= 1) {
+      document.getElementById('b-total').value = price * guests;
+      updateDeposit();
+    }
+  }
+
+  // Wire dish select to auto-calc
+  document.getElementById('b-dish').addEventListener('change', autoCalcTotal);
+
+  function updateDeposit() {
+    const total   = parseFloat(document.getElementById('b-total').value) || 0;
+    const deposit = Math.ceil(total * 0.5);
+    const balance = total - deposit;
+    document.getElementById('dep-total').textContent   = total   ? '$' + total.toFixed(2)   : '—';
+    document.getElementById('dep-amount').textContent  = deposit ? '$' + deposit.toFixed(2) : '—';
+    document.getElementById('dep-balance').textContent = balance ? '$' + balance.toFixed(2) : '—';
+  }
+
+  // ── PAYMENT LINKS ─────────────────────────────────────────────────────────
+  // Replace PAYPAL_LINK_HERE with his PayPal.me link, e.g.: https://paypal.me/dotogo
+  // Replace VENMO_LINK_HERE with his Venmo link, e.g.: https://venmo.com/u/dotogo
+
+  function confirmBooking() {
+    const name   = document.getElementById('b-fname').value + ' ' + document.getElementById('b-lname').value;
+    const email  = document.getElementById('b-email').value;
+    const phone  = document.getElementById('b-phone').value;
+    const dish   = document.getElementById('b-dish').value;
+    const guests = document.getElementById('b-guests').value;
+    const notes  = document.getElementById('b-notes').value;
+
+    // Save to localStorage
+    const key = selectedDate + '|||' + selectedTime;
+    bookings[key] = { name, email, phone, dish, guests, notes, date: selectedDate, time: selectedTime };
+    localStorage.setItem('dtg_bookings', JSON.stringify(bookings));
+
+    // Show confirm slot label
+    const parts = selectedDate.split('-');
+    const d = new Date(+parts[0], +parts[1]-1, +parts[2]);
+    const label = d.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', year:'numeric' });
+    document.getElementById('confirm-slot').textContent = label + ' at ' + selectedTime;
+
+    // Auto-add to Google Calendar via Apps Script
+    const [y, mo, dy] = selectedDate.split('-').map(Number);
+    let [timePart, ampm] = selectedTime.split(' ');
+    let [hr, mn] = timePart.split(':').map(Number);
+    if (ampm === 'PM' && hr !== 12) hr += 12;
+    if (ampm === 'AM' && hr === 12) hr = 0;
+    const pad = n => String(n).padStart(2, '0');
+    const startDT = `${y}-${pad(mo)}-${pad(dy)}T${pad(hr)}:${pad(mn)}:00`;
+    const endDT   = `${y}-${pad(mo)}-${pad(dy)}T${pad(hr + 2)}:${pad(mn)}:00`;
+
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzkIFf1bjdbzqnMpyLt-QOTT1yVEzjTEe0JfbwtgmQCIXvP69o7bCMPAU2K5GnKmNMX/exec';
+    const params = new URLSearchParams({
+      title:       `DoToGo — ${name} (${guests} guests)`,
+      start:       startDT,
+      end:         endDT,
+      description: `Dish: ${dish}\nGuests: ${guests}\nPhone: ${phone}\nEmail: ${email}\nNotes: ${notes}`
+    });
+    fetch(`${APPS_SCRIPT_URL}?${params}`).catch(() => {});
+
+    showWizardStep(3);
+    renderCalendar();
+    if (selectedDate) {
+      const p = selectedDate.split('-');
+      renderSlots(selectedDate, new Date(+p[0], +p[1]-1, +p[2]));
+    }
+
+    const btn = document.getElementById('pay-btn');
+    btn.textContent = "I've Sent My Payment ✓";
+    btn.disabled = false;
+  }
+
+  // ── MONTH NAVIGATION ──────────────────────────────────────────────────────
+
+  document.getElementById('prev-month').addEventListener('click', () => {
+    const now = new Date();
+    if (calYear === now.getFullYear() && calMonth === now.getMonth()) return;
+    if (--calMonth < 0) { calMonth = 11; calYear--; }
+    renderCalendar();
+  });
+
+  document.getElementById('next-month').addEventListener('click', () => {
+    if (++calMonth > 11) { calMonth = 0; calYear++; }
+    renderCalendar();
+  });
+
+  // Initial render
+  renderCalendar();
+</script>
+
+
+</body>
+</html>
