@@ -1493,71 +1493,86 @@
   </div>
   <!-- Chopstick illustration -->
   <div class="hero-illust-wrap" aria-hidden="true">
-    <svg class="hero-illust" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg class="hero-illust" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg"
      aria-hidden="true" focusable="false">
   <defs>
-    <radialGradient id="dtg-glow" cx="50%" cy="46%" r="54%">
-      <stop offset="0%" stop-color="rgba(212,160,23,0.22)"/>
-      <stop offset="65%" stop-color="rgba(212,160,23,0.06)"/>
+    <radialGradient id="dtg-glow" cx="50%" cy="48%" r="54%">
+      <stop offset="0%" stop-color="rgba(212,160,23,0.26)"/>
+      <stop offset="62%" stop-color="rgba(212,160,23,0.07)"/>
       <stop offset="100%" stop-color="rgba(212,160,23,0)"/>
     </radialGradient>
+
+    <!-- Everything white is kept; everything black is a cut the red shows through. -->
+    <mask id="dtg-cuts">
+      <rect x="0" y="0" width="340" height="340" fill="white"/>
+      <g fill="none" stroke="black" stroke-width="4.5" stroke-linecap="round">
+        <!-- horn ridges -->
+        <path d="M131 96 123 87M115 79 106 75M96 74 88 78M74 88 70 98M60 108 56 116"/>
+        <path d="M209 96 217 87M225 79 234 75M244 74 252 78M266 88 270 98M280 108 284 116"/>
+        <!-- brow and muzzle -->
+        <path d="M146 136c6-5 12-5 18 0M176 136c6-5 12-5 18 0"/>
+        <path d="M170 186v12"/>
+        <path d="M158 196c5 4 19 4 24 0"/>
+        <!-- a cut down each cheek, the way paper-cut opens a solid mass -->
+        <path d="M143 152c-3 16-1 30 5 42" stroke-width="3.5"/>
+        <path d="M197 152c3 16 1 30-5 42" stroke-width="3.5"/>
+        <!-- beard separations -->
+        <path d="M163 216c-2 14 0 26 7 36" stroke-width="3.5"/>
+        <path d="M177 216c2 14 0 26-7 36" stroke-width="3.5"/>
+      </g>
+      <!-- eyes are cuts, not dots -->
+      <g fill="black">
+        <ellipse cx="152" cy="152" rx="7" ry="9"/>
+        <ellipse cx="188" cy="152" rx="7" ry="9"/>
+      </g>
+    </mask>
   </defs>
-  <circle cx="160" cy="160" r="142" fill="url(#dtg-glow)"/>
 
-  <!-- medallion -->
-  <circle cx="160" cy="160" r="130" stroke="rgba(212,160,23,0.32)" stroke-width="1.5"/>
-  <circle cx="160" cy="160" r="120" stroke="rgba(212,160,23,0.16)" stroke-width="1"/>
+  <circle cx="170" cy="168" r="150" fill="url(#dtg-glow)"/>
 
-  <!-- Goat, head on: horns and ears are what make the silhouette read at a glance. -->
-  <g stroke="#d4a017" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
-    <!-- horns -->
-    <path d="M136 104 C128 76 112 52 92 40 C77 31 62 38 60 53 C58 68 71 80 88 79"/>
-    <path d="M184 104 C192 76 208 52 228 40 C243 31 258 38 260 53 C262 68 249 80 232 79"/>
-    <!-- horn ridges -->
-    <path d="M124 82 118 74M112 64 105 58M97 50 89 47" opacity="0.65"/>
-    <path d="M196 82 202 74M208 64 215 58M223 50 231 47" opacity="0.65"/>
+  <!-- the medallion -->
+  <circle cx="170" cy="168" r="136" stroke="rgba(212,160,23,0.34)" stroke-width="2"/>
+  <circle cx="170" cy="168" r="126" stroke="rgba(212,160,23,0.18)" stroke-width="1"/>
+
+  <g mask="url(#dtg-cuts)">
+    <!-- horns: spiralling inward and tapering, the way a ram's horn actually goes -->
+    <g fill="none" stroke="#d4a017" stroke-linecap="round">
+      <path d="M140 108 C124 86 106 70 86 72" stroke-width="18"/>
+      <path d="M86 72 C62 74 48 92 54 112" stroke-width="13.5"/>
+      <path d="M54 112 C60 132 82 141 99 131" stroke-width="9"/>
+      <path d="M99 131 C108 126 111 119 108 112" stroke-width="5.5"/>
+      <path d="M200 108 C216 86 234 70 254 72" stroke-width="18"/>
+      <path d="M254 72 C278 74 292 92 286 112" stroke-width="13.5"/>
+      <path d="M286 112 C280 132 258 141 241 131" stroke-width="9"/>
+      <path d="M241 131 C232 126 229 119 232 112" stroke-width="5.5"/>
+    </g>
     <!-- ears -->
-    <path d="M126 126 C104 117 80 121 70 134 C64 143 71 153 84 152 C102 151 119 141 127 135"/>
-    <path d="M194 126 C216 117 240 121 250 134 C256 143 249 153 236 152 C218 151 201 141 193 135"/>
+    <path fill="#d4a017" d="M134 134 C112 130 90 142 84 158 C80 171 91 181 105 176 C120 171 132 155 135 142 Z"/>
+    <path fill="#d4a017" d="M206 134 C228 130 250 142 256 158 C260 171 249 181 235 176 C220 171 208 155 205 142 Z"/>
     <!-- face -->
-    <path d="M126 112 C121 148 128 182 142 205 C149 216 171 216 178 205 C192 182 199 148 194 112
-             C186 100 134 100 126 112 Z"/>
-    <!-- muzzle + mouth -->
-    <path d="M151 190 148 194M169 190 172 194"/>
-    <path d="M160 198 v7"/>
+    <path fill="#d4a017" d="M136 118 C131 158 139 194 153 214 C159 225 181 225 187 214
+                             C201 194 209 158 204 118 C195 105 145 105 136 118 Z"/>
     <!-- beard -->
-    <path d="M147 209 C144 231 151 253 160 266 C169 253 176 231 173 209"/>
+    <path fill="#d4a017" d="M154 214 C150 236 157 258 170 272 C183 258 190 236 186 214 Z"/>
   </g>
-  <circle cx="143" cy="143" r="5.4" fill="#d4a017"/>
-  <circle cx="177" cy="143" r="5.4" fill="#d4a017"/>
 
-  <!-- hoa mai: the five-petal apricot blossom of a southern Vietnamese Tet -->
-  <g stroke="#d4a017" fill="none" stroke-linecap="round">
-    <g transform="translate(250,92)" stroke-width="2" opacity="0.6">
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(72)"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(144)"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(216)"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(288)"/>
-      <circle r="2.6" fill="#d4a017" stroke="none"/>
-    </g>
-    <g transform="translate(64,242) scale(0.82)" stroke-width="2.4" opacity="0.5">
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(72)"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(144)"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(216)"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(288)"/>
-      <circle r="2.6" fill="#d4a017" stroke="none"/>
-    </g>
-    <g transform="translate(262,254) scale(0.66)" stroke-width="3" opacity="0.42">
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(72)"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(144)"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(216)"/>
-      <ellipse cx="0" cy="-11" rx="5.6" ry="8.4" transform="rotate(288)"/>
-      <circle r="2.6" fill="#d4a017" stroke="none"/>
-    </g>
+  <!-- xiangyun, the auspicious cloud scroll -->
+  <g>
+    <g transform="translate(40,226) scale(0.95)" opacity="0.75"><g fill="none" stroke="#d4a017" stroke-linecap="round">
+      <path d="M4 30 C-6 18 -1 2 15 0 C31 -2 40 10 35 21 C31 29 20 31 15 25 C11 20 14 13 20 13"
+            stroke-width="6.5"/>
+      <path d="M40 32 C50 28 62 30 68 36" stroke-width="5"/>
+      <path d="M8 40 C20 36 32 37 40 42" stroke-width="4.5"/>
+    </g></g>
+    <g transform="translate(302,228) scale(0.8) scale(-1,1)" opacity="0.6"><g fill="none" stroke="#d4a017" stroke-linecap="round">
+      <path d="M4 30 C-6 18 -1 2 15 0 C31 -2 40 10 35 21 C31 29 20 31 15 25 C11 20 14 13 20 13"
+            stroke-width="6.5"/>
+      <path d="M40 32 C50 28 62 30 68 36" stroke-width="5"/>
+      <path d="M8 40 C20 36 32 37 40 42" stroke-width="4.5"/>
+    </g></g>
   </g>
+
+  <g transform="translate(170,300) scale(0.7)" opacity="0.72"><g fill="#d4a017"><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(0)"/><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(144)"/><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(216)"/><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(288)"/></g><circle r="4.2" fill="#3d0808"/></g><g transform="translate(296,158) scale(0.52)" opacity="0.55"><g fill="#d4a017"><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(0)"/><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(72)"/><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(144)"/><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(216)"/><ellipse cx="0" cy="-13" rx="7.4" ry="10.5" transform="rotate(288)"/></g><circle r="4.2" fill="#3d0808"/></g>
 </svg>
   </div>
 
@@ -1634,14 +1649,14 @@
 
     <!-- Featured: Egg Rolls -->
     <div class="menu-featured">
-      <div class="featured-img"><span class="food-icon"><svg class="dtg-icon" width="150" height="150" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <div class="featured-img"><span class="food-icon"><svg class="dtg-icon" width="150" height="150" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
 <g transform="rotate(-22 32 30)">
-  <rect x="7" y="14" width="39" height="11" rx="5.5"/>
+  <rect x="7" y="14" width="39" height="11" rx="5.5" fill="rgba(212,160,23,0.16)"/>
   <path d="M16 14.6 12.4 24.4M26 14.6 22.4 24.4M36 14.6 32.4 24.4"/>
-  <rect x="13" y="29" width="39" height="11" rx="5.5"/>
+  <rect x="13" y="29" width="39" height="11" rx="5.5" fill="rgba(212,160,23,0.16)"/>
   <path d="M22 29.6 18.4 39.4M32 29.6 28.4 39.4M42 29.6 38.4 39.4"/>
 </g>
-<path d="M37 48h19a9.5 9.5 0 0 1-19 0z"/>
+<path d="M37 48h19a9.5 9.5 0 0 1-19 0z" fill="rgba(212,160,23,0.16)"/>
 <path d="M43.5 44c1.4-2.2 3.4-3.2 5.6-3.1"/>
 </svg></span></div>
       <div class="featured-body">
@@ -1659,8 +1674,8 @@
     <!-- 4-card grid -->
     <div class="menu-grid">
       <div class="menu-card">
-        <div class="card-img"><span class="food-icon"><svg class="dtg-icon" width="100" height="100" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-<path d="M7 31h42c0 11.6-9.4 21-21 21S7 42.6 7 31z"/>
+        <div class="card-img"><span class="food-icon"><svg class="dtg-icon" width="100" height="100" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="M7 31h42c0 11.6-9.4 21-21 21S7 42.6 7 31z" fill="rgba(212,160,23,0.16)"/>
 <path d="M19 52.5h18"/>
 <path d="M13 35.5c4.5 3.4 8.5 1 12.5 3.2s8.5 1 12.5-2.4"/>
 <path d="M36 8 25.5 29M44 10.5 32 30"/>
@@ -1675,14 +1690,14 @@
       </div>
 
       <div class="menu-card">
-        <div class="card-img"><span class="food-icon"><svg class="dtg-icon" width="100" height="100" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-<rect x="10" y="12" width="15" height="38" rx="7.5"/>
+        <div class="card-img"><span class="food-icon"><svg class="dtg-icon" width="100" height="100" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<rect x="10" y="12" width="15" height="38" rx="7.5" fill="rgba(212,160,23,0.16)"/>
 <path d="M14 21c3-2.6 6-2.6 7.6 0M14 29c3-2.6 6-2.6 7.6 0M14 37c3-2.6 6-2.6 7.6 0"/>
-<rect x="29" y="19" width="15" height="31" rx="7.5"/>
+<rect x="29" y="19" width="15" height="31" rx="7.5" fill="rgba(212,160,23,0.16)"/>
 <path d="M33 28c3-2.6 6-2.6 7.6 0M33 36c3-2.6 6-2.6 7.6 0"/>
 <path d="M36.5 19V9"/>
 <path d="M36.5 12.5c2-2.4 4.4-3.5 7-3.5"/>
-<path d="M48 42h11a5.5 5.5 0 0 1-11 0z"/>
+<path d="M48 42h11a5.5 5.5 0 0 1-11 0z" fill="rgba(212,160,23,0.16)"/>
 </svg></span></div>
         <div class="card-body">
           <span class="card-num">03 — Signature</span>
@@ -1693,8 +1708,8 @@
       </div>
 
       <div class="menu-card">
-        <div class="card-img"><span class="food-icon"><svg class="dtg-icon" width="100" height="100" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-<path d="M7 32c0-6 5-10.5 12-10.5h26c6.6 0 11 4.4 11 10.5S51.6 42.5 45 42.5H19C12 42.5 7 38 7 32z"/>
+        <div class="card-img"><span class="food-icon"><svg class="dtg-icon" width="100" height="100" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="M7 32c0-6 5-10.5 12-10.5h26c6.6 0 11 4.4 11 10.5S51.6 42.5 45 42.5H19C12 42.5 7 38 7 32z" fill="rgba(212,160,23,0.16)"/>
 <path d="M18 25.5 14.6 31M28 24.5 24.6 30M38 24.5 34.6 30M48 25.5 44.6 31"/>
 <path d="M11 35.5c4.2 2.2 7.4-1 11.6 1.2s7.4-1 11.6 1.2 7.4-1 11.6 1.2"/>
 </svg></span></div>
@@ -1707,12 +1722,12 @@
       </div>
 
       <div class="menu-card">
-        <div class="card-img"><span class="food-icon"><svg class="dtg-icon" width="100" height="100" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-<ellipse cx="32" cy="44" rx="26" ry="9.5"/>
+        <div class="card-img"><span class="food-icon"><svg class="dtg-icon" width="100" height="100" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<ellipse cx="32" cy="44" rx="26" ry="9.5" fill="rgba(212,160,23,0.16)"/>
 <path d="M12 44c5 2.6 35 2.6 40 0" opacity="0.55"/>
-<path d="M13 42c0-6.4 4.6-11.2 10.4-11.2S33.8 35.6 33.8 42"/>
+<path d="M13 42c0-6.4 4.6-11.2 10.4-11.2S33.8 35.6 33.8 42" fill="rgba(212,160,23,0.16)"/>
 <path d="M17 37.4c2.7-1.9 5.4-1.9 8.1 0"/>
-<path d="M37 42c-.6-5.4 3.2-9.6 8.4-9.6 4.8 0 8 3.2 8 7.4 0 1.3-.8 2.2-2.2 2.2z"/>
+<path d="M37 42c-.6-5.4 3.2-9.6 8.4-9.6 4.8 0 8 3.2 8 7.4 0 1.3-.8 2.2-2.2 2.2z" fill="rgba(212,160,23,0.16)"/>
 <path d="M46 32.4c0-2.7 1.6-4.3 3.6-4.3"/>
 <path d="M20 25c-.4-3.4 1.2-5.8 3-7.4M28 23.6c-1-3.2-.2-5.8 1-8"/>
 </svg></span></div>
@@ -1739,8 +1754,8 @@
     </div>
     <div class="steps">
       <div class="step">
-        <span class="step-icon"><svg class="dtg-icon" width="54" height="54" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-<rect x="13" y="7" width="38" height="50" rx="3"/>
+        <span class="step-icon"><svg class="dtg-icon" width="54" height="54" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<rect x="13" y="7" width="38" height="50" rx="3" fill="rgba(212,160,23,0.16)"/>
 <path d="M21 20h22M21 28h22M21 36h14"/>
 <circle cx="40" cy="45" r="7"/><path d="M45 50l5 5"/>
 </svg></span>
@@ -1749,8 +1764,8 @@
         <p class="step-desc">Pick from our 5 signature dishes. Mix and match for your event. Have questions about portions? Just ask.</p>
       </div>
       <div class="step">
-        <span class="step-icon"><svg class="dtg-icon" width="54" height="54" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-<rect x="7" y="13" width="50" height="44" rx="3"/>
+        <span class="step-icon"><svg class="dtg-icon" width="54" height="54" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<rect x="7" y="13" width="50" height="44" rx="3" fill="rgba(212,160,23,0.16)"/>
 <path d="M7 26h50"/>
 <path d="M20 7v11M44 7v11"/>
 <path d="M22 40l6.5 6.5L42 33"/>
@@ -1760,8 +1775,8 @@
         <p class="step-desc">Pick a date on the calendar below to lock in your spot with a deposit — or send a message if you have questions first.</p>
       </div>
       <div class="step">
-        <span class="step-icon"><svg class="dtg-icon" width="54" height="54" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-<path d="M15 27h34l-3 27a3.5 3.5 0 0 1-3.5 3H21.5A3.5 3.5 0 0 1 18 54z"/>
+        <span class="step-icon"><svg class="dtg-icon" width="54" height="54" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="M15 27h34l-3 27a3.5 3.5 0 0 1-3.5 3H21.5A3.5 3.5 0 0 1 18 54z" fill="rgba(212,160,23,0.16)"/>
 <rect x="12" y="20" width="40" height="7" rx="1.5"/>
 <path d="M24 14c0-3.4 2-4.6 2-7M32 11.5c0-3.4 2-4.6 2-7M40 14c0-3.4 2-4.6 2-7"/>
 </svg></span>
