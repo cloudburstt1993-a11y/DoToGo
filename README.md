@@ -44,11 +44,23 @@ Setting `bookingEmbedUrl` removes this calendar entirely and embeds the real
 scheduler in its place. That is the fix — the stopgap just avoids promising
 availability nobody has checked.
 
+## This is a pitch demo, and search engines are told so
+
+`index.html` carries `<meta name="robots" content="noindex, nofollow">`. A demo
+with placeholder prices and a test payment button has no business ranking for
+"Vietnamese catering Grand Junction", and later it would compete with his real
+site for the same searches. Flip that one tag to `index, follow` on launch day.
+
+Crawling is deliberately left open in `robots.txt`. A `Disallow: /` would be
+counterproductive here: a crawler that is blocked never reads the noindex tag,
+and the URL can still end up listed from an external link.
+
+Every URL — canonical, `og:url`, the two JSON-LD urls, `sitemap.xml` and
+`robots.txt` — points at the GitHub Pages origin this actually lives on. When a
+domain is registered, those are the five places to change.
+
 ## Still to fill in
 
-- `canonical`, `og:url` and the sitemap all point at `https://dotogo.com/`.
-  Until that domain is registered and pointed here, those tags send search
-  engines to a site that does not exist.
 - The footer's social buttons link to `#`.
 - Menu prices and the 10-guest minimum are in both the visible page and the
   `CateringBusiness` JSON-LD near the top of `<head>`. Change them in both.

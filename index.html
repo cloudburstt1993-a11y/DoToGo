@@ -9,8 +9,15 @@
   <meta name="description" content="Authentic Vietnamese home catering in Grand Junction, Colorado. Fresh egg rolls, phở, spring rolls, bánh mì & cơm tấm made to order for events and gatherings. Min. 10 guests. Book online.">
   <meta name="keywords" content="Vietnamese catering Grand Junction, Vietnamese food Grand Junction Colorado, home catering Grand Junction CO, egg rolls catering, pho catering Colorado, spring rolls catering, Vietnamese caterer near me, Grand Junction event catering, Western Slope catering">
   <meta name="author" content="DoToGo">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://dotogo.com/">
+  <!-- A pitch, not his live site: placeholder prices, a test payment button,
+       and it would compete with his real site later. Flip to "index, follow"
+       on launch day. Crawling stays allowed in robots.txt on purpose — a
+       blocked crawler never reads this tag. -->
+  <meta name="robots" content="noindex, nofollow">
+  <!-- SITE ORIGIN: this demo lives on GitHub Pages. When a domain is
+       registered, change it here, in og:url, in the two JSON-LD urls
+       below, and in sitemap.xml + robots.txt. -->
+  <link rel="canonical" href="https://cloudburstt1993-a11y.github.io/DoToGo/">
 
   <!-- Geo -->
   <meta name="geo.region" content="US-CO">
@@ -18,7 +25,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dotogo.com/">
+  <meta property="og:url" content="https://cloudburstt1993-a11y.github.io/DoToGo/">
   <meta property="og:title" content="DoToGo | Vietnamese Home Catering in Grand Junction, CO">
   <meta property="og:description" content="Fresh Vietnamese dishes crafted to order from our home kitchen — egg rolls, phở, spring rolls, bánh mì & cơm tấm. Perfect for events and gatherings of all sizes in Grand Junction, Colorado.">
   <meta property="og:site_name" content="DoToGo">
@@ -36,8 +43,7 @@
     "@type": "CateringBusiness",
     "name": "DoToGo",
     "description": "Authentic Vietnamese home catering in Grand Junction, Colorado. Fresh egg rolls, phở, spring rolls, bánh mì, and cơm tấm crafted to order for events and gatherings.",
-    "url": "https://dotogo.com",
-    "email": "hello@dotogo.com",
+    "url": "https://cloudburstt1993-a11y.github.io/DoToGo",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Grand Junction",
@@ -50,7 +56,7 @@
     ],
     "servesCuisine": "Vietnamese",
     "priceRange": "$$",
-    "hasMenu": "https://dotogo.com/#menu",
+    "hasMenu": "https://cloudburstt1993-a11y.github.io/DoToGo/#menu",
     "acceptsReservations": true,
     "menu": [
       { "@type": "MenuItem", "name": "Crispy Egg Rolls", "offers": { "@type": "Offer", "price": "14", "priceCurrency": "USD" } },
@@ -2097,6 +2103,12 @@
       if (!DOTOGO.email) { hideRow(a); if (!a.closest('.citem')) a.style.display = 'none'; return; }
       a.href = 'mailto:' + DOTOGO.email;
       a.querySelectorAll('.citem-val').forEach(v => { v.textContent = DOTOGO.email; });
+      // some of these show the address as their own text
+      a.childNodes.forEach(node => {
+        if (node.nodeType === 3 && /@/.test(node.textContent)) {
+          node.textContent = node.textContent.replace(/\S+@\S+/, DOTOGO.email);
+        }
+      });
     });
 
     // peer-to-peer payment buttons
@@ -2393,7 +2405,7 @@
           This slot is taken. Reach out to find another time.
         </div>
         <a href="tel:+10000000000" class="btn-gold" style="display:block;text-align:center;margin-bottom:8px;font-size:0.78rem;padding:12px"><svg class="dtg-icon dtg-inline" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (XXX) XXX-XXXX</a>
-        <a href="mailto:hello@dotogo.com" class="btn-ghost" style="display:block;text-align:center;font-size:0.78rem;padding:12px">&#9993; hello@dotogo.com</a>
+        <a href="mailto:hello@dotogo.com" class="btn-ghost" style="display:block;text-align:center;font-size:0.78rem;padding:12px"><svg class="dtg-icon dtg-inline" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2.5 6.5 9.5 7 9.5-7"/></svg> hello@dotogo.com</a>
       </div>`;
   }
 

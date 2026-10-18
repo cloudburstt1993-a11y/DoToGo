@@ -1,33 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Demo origin. Change these five URLs when a real domain is registered. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://pdocaters.com/</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://pdocaters.com/#about</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pdocaters.com/#menu</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pdocaters.com/#booking</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://pdocaters.com/#contact</loc>
-    <lastmod>2026-06-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <url><loc>https://cloudburstt1993-a11y.github.io/DoToGo/</loc></url>
+  <url><loc>https://cloudburstt1993-a11y.github.io/DoToGo/#about</loc></url>
+  <url><loc>https://cloudburstt1993-a11y.github.io/DoToGo/#menu</loc></url>
+  <url><loc>https://cloudburstt1993-a11y.github.io/DoToGo/#booking</loc></url>
+  <url><loc>https://cloudburstt1993-a11y.github.io/DoToGo/#contact</loc></url>
 </urlset>
