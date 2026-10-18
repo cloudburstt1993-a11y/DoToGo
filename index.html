@@ -2084,6 +2084,15 @@
     // Peer-to-peer payment, if he wants to keep offering it
     paypalUrl: '',           // e.g. 'https://paypal.me/dotogo'
     venmoUrl:  '',           // e.g. 'https://venmo.com/u/dotogo'
+
+    // Social. The whole row disappears while these are empty — four icons
+    // that look clickable and go nowhere is worse than no icons.
+    social: {
+      Facebook:  '',
+      Instagram: '',
+      TikTok:    '',
+      Snapchat:  '',
+    },
   };
 
   /* Applies whatever is filled in above and hides the rest. */
@@ -2131,6 +2140,28 @@
         pay.style.cssText = 'display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;padding:15px';
         pay.textContent = 'Pay the 50% deposit by card';
         anchor.parentNode.insertBefore(pay, anchor);
+      }
+    }
+
+    // social links, and the label above them
+    let socialShown = 0;
+    document.querySelectorAll('.footer-social-btn').forEach(a => {
+      const url = (DOTOGO.social || {})[a.getAttribute('title')] || '';
+      if (url) {
+        a.href = url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        socialShown++;
+      } else {
+        a.style.display = 'none';
+      }
+    });
+    if (!socialShown) {
+      const grid = document.querySelector('.footer-social-grid');
+      if (grid) {
+        grid.style.display = 'none';
+        const label = grid.parentNode && grid.parentNode.querySelector('.footer-col-label');
+        if (label) label.style.display = 'none';
       }
     }
 

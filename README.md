@@ -18,6 +18,7 @@ than showing a dead link or a phone number nobody answers.
 | `bookingEmbedUrl` | A real scheduler replaces the built-in calendar | Calendly, Acuity, Google Appointments or Square |
 | `stripeDepositUrl` | "Pay the 50% deposit by card" button | Stripe → Payment Links |
 | `paypalUrl` / `venmoUrl` | The peer-to-peer payment buttons | paypal.me / venmo.com |
+| `social.Facebook` etc. | The footer social buttons | his profile URLs |
 
 Two rules for the Stripe link:
 
@@ -61,7 +62,9 @@ domain is registered, those are the five places to change.
 
 ## Still to fill in
 
-- The footer's social buttons link to `#`.
+Nothing in the markup. What is left needs accounts only DoToGo can open:
+a Formspree form, a scheduling tool, a Stripe account, a domain, and his real
+phone, email and social profiles. Each is one line in the settings block.
 - Menu prices and the 10-guest minimum are in both the visible page and the
   `CateringBusiness` JSON-LD near the top of `<head>`. Change them in both.
 
