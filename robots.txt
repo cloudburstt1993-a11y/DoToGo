@@ -1,3 +1,7 @@
+# This is a pitch demo, not DoToGo's live site.
+# Crawling is deliberately allowed: the noindex tag in index.html is what keeps
+# it out of search, and a crawler blocked here would never get to read it.
 User-agent: *
 Allow: /
-Sitemap: https://pdocaters.com/sitemap.xml
+
+Sitemap: https://cloudburstt1993-a11y.github.io/DoToGo/sitemap.xml
