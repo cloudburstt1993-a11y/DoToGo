@@ -668,6 +668,7 @@
     .citem:hover { border-color: var(--gold); background: var(--bg-2); }
 
     .dtg-inline { display: inline-block; vertical-align: -3px; }
+    .form-status { margin: 14px 0 0; font-size: 0.86rem; line-height: 1.6; color: var(--gold-light); min-height: 1.2em; }
     .citem-icon { width: 40px; flex-shrink: 0; color: var(--gold-light); display: flex; align-items: center; justify-content: center; }
 
     .citem-lbl {
@@ -1802,8 +1803,8 @@
           </div>
           <div class="booking-sidebar">
             <div class="booking-legend">
-              <div class="legend-row"><span class="legend-dot avail"></span><span>Available to book</span></div>
-              <div class="legend-row"><span class="legend-dot booked-dot"></span><span>Reserved — click for contact info</span></div>
+              <div class="legend-row"><span class="legend-dot avail"></span><span>Open — request this date</span></div>
+              <div class="legend-row"><span class="legend-dot booked-dot"></span><span>Already taken — tap to reach us</span></div>
               <div class="legend-row"><span class="legend-dot today-dot"></span><span>Today</span></div>
             </div>
             <div id="sidebar-body">
@@ -1814,7 +1815,7 @@
 <path d="M20 7v11M44 7v11"/>
 <path d="M22 40l6.5 6.5L42 33"/>
 </svg></span>
-                <p>Pick a date from the calendar to see available time slots.</p>
+                <p>Pick a date to request a time. We confirm every booking by phone or email before it is final.</p>
               </div>
             </div>
             <div class="booking-note">
@@ -1847,24 +1848,28 @@
             </a>
           </div>
           <span class="form-label">Or Send a Message</span>
-          <form class="contact-form" onsubmit="handleSubmit(event)">
+          <form class="contact-form" id="order-form" onsubmit="handleSubmit(event)">
             <div class="form-row">
               <div class="fg">
                 <label>First Name</label>
-                <input type="text" placeholder="Your first name" required>
+                <input type="text" name="first_name" placeholder="Your first name" required>
               </div>
               <div class="fg">
                 <label>Last Name</label>
-                <input type="text" placeholder="Last name">
+                <input type="text" name="last_name" placeholder="Last name">
               </div>
             </div>
             <div class="fg">
+              <label>Email</label>
+                <input type="email" name="email" placeholder="you@example.com" required>
+              </div>
+              <div class="fg">
               <label>Phone Number</label>
-              <input type="tel" placeholder="(XXX) XXX-XXXX">
+              <input type="tel" name="phone" placeholder="(XXX) XXX-XXXX">
             </div>
             <div class="fg">
               <label>What Are You Ordering?</label>
-              <select required>
+              <select name="dish" required>
                 <option value="" disabled selected>Select a dish...</option>
                 <option>Crispy Egg Rolls</option>
                 <option>Ph&#7903; Noodle Soup</option>
@@ -1876,9 +1881,10 @@
             </div>
             <div class="fg">
               <label>Event Date &amp; Details</label>
-              <textarea placeholder="Tell us your event date, headcount, any dietary needs, and anything else we should know..."></textarea>
+              <textarea name="details" placeholder="Tell us your event date, headcount, any dietary needs, and anything else we should know..."></textarea>
             </div>
             <button type="submit" class="btn-submit">Send Order Request</button>
+            <p class="form-status" id="order-status" role="status" aria-live="polite"></p>
           </form>
         </div>
 
@@ -1979,6 +1985,7 @@
         <div class="bw-success-icon">&#10003;</div>
         <h3 style="text-align:center">You're Booked!</h3>
         <p style="color:var(--gold);font-family:'Playfair Display',serif;font-style:italic;margin-bottom:16px" id="confirm-slot"></p>
+        <p id="confirm-note" class="form-status" style="display:none"></p>
         <p style="font-size:0.87rem;color:var(--muted);line-height:1.78;margin-bottom:32px">Your date is locked in. We'll reach out within 24 hours to confirm all the details.</p>
         <button class="btn-gold" onclick="showPanel(0)" style="display:block;width:100%;max-width:260px;margin:0 auto">Book Another Event</button>
       </div>
@@ -2041,18 +2048,151 @@
 </footer>
 
 <script>
+
+  /* ══════════════════════════════════════════════════════════════════════
+     GO-LIVE SETTINGS
+     Fill these in and nothing else needs touching. Every one is safe to
+     leave empty: the page hides whatever is not connected yet rather than
+     showing a dead link or a phone number nobody answers.
+     ══════════════════════════════════════════════════════════════════════ */
+  const DOTOGO = {
+    // Contact — shown in the booking panel and the footer
+    phone:        '',   // digits + country code, e.g. '+19705550123'
+    phoneDisplay: '',   // how it should read, e.g. '(970) 555-0123'
+    email:        '',   // e.g. 'orders@dotogo.com'
+
+    // Where order requests are delivered. Formspree is the quickest:
+    // make a form at formspree.io, paste its URL here, done.
+    orderFormEndpoint: '',   // e.g. 'https://formspree.io/f/xxxxxxxx'
+
+    // Real scheduling. Paste the booking URL from whichever tool he picks —
+    // Calendly, Acuity, Google Appointments or Square all give you one.
+    // Once this is set it takes over from the calendar below, which cannot
+    // know his real availability.
+    bookingEmbedUrl: '',     // e.g. 'https://calendly.com/dotogo/event'
+
+    // Stripe Payment Link for the 50% deposit. Use a TEST-mode link until
+    // his account is verified, and make sure it is HIS Stripe account.
+    stripeDepositUrl: '',    // e.g. 'https://buy.stripe.com/test_xxxxxxxx'
+
+    // Peer-to-peer payment, if he wants to keep offering it
+    paypalUrl: '',           // e.g. 'https://paypal.me/dotogo'
+    venmoUrl:  '',           // e.g. 'https://venmo.com/u/dotogo'
+  };
+
+  /* Applies whatever is filled in above and hides the rest. */
+  (function applyConfig() {
+    const hideRow = el => { const row = el && el.closest('.citem'); if (row) row.style.display = 'none'; };
+
+    // phone
+    document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+      if (!DOTOGO.phone) { hideRow(a); if (!a.closest('.citem')) a.style.display = 'none'; return; }
+      a.href = 'tel:' + DOTOGO.phone;
+      a.querySelectorAll('.citem-val').forEach(v => { v.textContent = DOTOGO.phoneDisplay || DOTOGO.phone; });
+      if (!a.closest('.citem')) a.lastChild.textContent = ' ' + (DOTOGO.phoneDisplay || DOTOGO.phone);
+    });
+
+    // email
+    document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+      if (!DOTOGO.email) { hideRow(a); if (!a.closest('.citem')) a.style.display = 'none'; return; }
+      a.href = 'mailto:' + DOTOGO.email;
+      a.querySelectorAll('.citem-val').forEach(v => { v.textContent = DOTOGO.email; });
+    });
+
+    // peer-to-peer payment buttons
+    [['paypal-btn', DOTOGO.paypalUrl], ['venmo-btn', DOTOGO.venmoUrl]].forEach(([id, url]) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (url) { el.href = url; } else { el.style.display = 'none'; }
+    });
+
+    // Stripe deposit — a card payment beats asking for Venmo, so it goes first
+    if (DOTOGO.stripeDepositUrl) {
+      const anchor = document.getElementById('paypal-btn');
+      if (anchor && anchor.parentNode) {
+        const pay = document.createElement('a');
+        pay.href = DOTOGO.stripeDepositUrl;
+        pay.target = '_blank';
+        pay.rel = 'noopener';
+        pay.className = 'btn-gold';
+        pay.id = 'stripe-deposit-btn';
+        pay.style.cssText = 'display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;padding:15px';
+        pay.textContent = 'Pay the 50% deposit by card';
+        anchor.parentNode.insertBefore(pay, anchor);
+      }
+    }
+
+    // A real scheduler replaces the hand-rolled calendar entirely: that
+    // calendar has no way of knowing which dates he has actually taken.
+    if (DOTOGO.bookingEmbedUrl) {
+      const grid = document.querySelector('.booking-grid') ||
+                   document.querySelector('.booking-cal') ||
+                   document.getElementById('cal-days');
+      const host = grid && grid.closest('.booking-grid, .booking-wrap, section') ;
+      const target = document.querySelector('.booking-grid') || grid;
+      if (target) {
+        const frame = document.createElement('iframe');
+        frame.src = DOTOGO.bookingEmbedUrl;
+        frame.title = 'Book your event with DoToGo';
+        frame.loading = 'lazy';
+        frame.style.cssText = 'width:100%;min-height:760px;border:1px solid var(--border);background:var(--bg-2)';
+        target.replaceWith(frame);
+      }
+    }
+  })();
+
   function handleSubmit(e) {
     e.preventDefault();
-    const btn = e.target.querySelector('.btn-submit');
-    btn.textContent = 'Message Sent!';
-    btn.style.background = '#2a7a4a';
-    btn.style.color = '#fff';
-    setTimeout(() => {
-      btn.textContent = 'Send Order Request';
-      btn.style.background = '';
-      btn.style.color = '';
-      e.target.reset();
-    }, 3000);
+    const form   = e.target;
+    const btn    = form.querySelector('.btn-submit');
+    const status = form.querySelector('.form-status');
+    const say = (msg, bad) => {
+      if (!status) return;
+      status.textContent = msg;
+      status.style.color = bad ? '#e85040' : 'var(--gold-light)';
+    };
+
+    // Nothing is wired up yet. Saying "sent" here would be a lie, and the
+    // order would be lost — so hand them a route that actually reaches him.
+    if (!DOTOGO.orderFormEndpoint) {
+      if (DOTOGO.email) {
+        say('Online ordering isn\'t switched on yet — opening your email app so this reaches us.');
+        const body = Array.from(form.elements)
+          .filter(el => el.name && el.value)
+          .map(el => el.name.replace(/_/g, ' ') + ': ' + el.value).join('\n');
+        window.location.href = 'mailto:' + DOTOGO.email +
+          '?subject=' + encodeURIComponent('Order request from the DoToGo site') +
+          '&body=' + encodeURIComponent(body);
+      } else {
+        say('Online ordering isn\'t switched on yet. Please call or text to place an order.', true);
+      }
+      return;
+    }
+
+    const original = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    say('');
+
+    fetch(DOTOGO.orderFormEndpoint, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    })
+      .then(r => {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        form.reset();
+        btn.textContent = 'Request Sent';
+        say('Thanks — we have your request and will confirm by phone or email.');
+      })
+      .catch(() => {
+        btn.textContent = original;
+        say('That did not go through. Please call or text us instead.', true);
+      })
+      .finally(() => {
+        btn.disabled = false;
+        setTimeout(() => { btn.textContent = original; }, 5000);
+      });
   }
 
   // Fade-in on scroll
@@ -2100,10 +2240,11 @@
   function isFullyBooked(dk) { return TIME_SLOTS.every(t => isSlotBooked(dk, t)); }
 
   function renderCalendar() {
+    const container = document.getElementById('cal-days');
+    if (!container) return;   // a real scheduler replaced this calendar
     document.getElementById('cal-month-label').textContent =
       MONTH_NAMES[calMonth] + ' ' + calYear;
 
-    const container = document.getElementById('cal-days');
     container.innerHTML = '';
 
     const firstWeekday   = new Date(calYear, calMonth, 1).getDay();
@@ -2206,12 +2347,7 @@
   function updateSidebar() {
     const body = document.getElementById('sidebar-body');
     if (!selectedDate) {
-      body.innerHTML = '<div class="sidebar-empty"><span class="sidebar-emoji"><svg class="dtg-icon" width="44" height="44" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-<rect x="7" y="13" width="50" height="44" rx="3"/>
-<path d="M7 26h50"/>
-<path d="M20 7v11M44 7v11"/>
-<path d="M22 40l6.5 6.5L42 33"/>
-</svg></span><p>Pick a date from the calendar to see available time slots.</p></div>';
+      body.innerHTML = '<div class="sidebar-empty"><span class="sidebar-emoji"><svg class="dtg-icon" width="44" height="44" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"> <rect x="7" y="13" width="50" height="44" rx="3"/> <path d="M7 26h50"/> <path d="M20 7v11M44 7v11"/> <path d="M22 40l6.5 6.5L42 33"/> </svg></span><p>Pick a date from the calendar to see available time slots.</p></div>';
       return;
     }
     const parts = selectedDate.split('-');
@@ -2310,6 +2446,11 @@
   // Replace PAYPAL_LINK_HERE with his PayPal.me link, e.g.: https://paypal.me/dotogo
   // Replace VENMO_LINK_HERE with his Venmo link, e.g.: https://venmo.com/u/dotogo
 
+  function confirmNote(msg) {
+    const el = document.getElementById('confirm-note');
+    if (el) { el.textContent = msg; el.style.display = msg ? 'block' : 'none'; }
+  }
+
   function confirmBooking() {
     const name   = document.getElementById('b-fname').value + ' ' + document.getElementById('b-lname').value;
     const email  = document.getElementById('b-email').value;
@@ -2346,7 +2487,13 @@
       end:         endDT,
       description: `Dish: ${dish}\nGuests: ${guests}\nPhone: ${phone}\nEmail: ${email}\nNotes: ${notes}`
     });
-    fetch(`${APPS_SCRIPT_URL}?${params}`).catch(() => {});
+    // A booking that never reaches his calendar is worse than one that is
+    // refused: he does not know to cook, and the customer thinks he does.
+    fetch(`${APPS_SCRIPT_URL}?${params}`)
+      .then(() => { confirmNote(''); })
+      .catch(() => {
+        confirmNote('We could not reach our calendar just now, so please call or text to confirm this date.');
+      });
 
     showWizardStep(3);
     renderCalendar();
@@ -2362,19 +2509,22 @@
 
   // ── MONTH NAVIGATION ──────────────────────────────────────────────────────
 
-  document.getElementById('prev-month').addEventListener('click', () => {
+  const prevMonthBtn = document.getElementById('prev-month');
+  const nextMonthBtn = document.getElementById('next-month');
+
+  if (prevMonthBtn) prevMonthBtn.addEventListener('click', () => {
     const now = new Date();
     if (calYear === now.getFullYear() && calMonth === now.getMonth()) return;
     if (--calMonth < 0) { calMonth = 11; calYear--; }
     renderCalendar();
   });
 
-  document.getElementById('next-month').addEventListener('click', () => {
+  if (nextMonthBtn) nextMonthBtn.addEventListener('click', () => {
     if (++calMonth > 11) { calMonth = 0; calYear++; }
     renderCalendar();
   });
 
-  // Initial render
+  // Initial render — skipped entirely when a real scheduler took its place.
   renderCalendar();
 </script>
 
